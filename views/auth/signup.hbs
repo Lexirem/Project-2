@@ -1,0 +1,28 @@
+<div id="form-container">
+  <form action="/signup" method="POST">
+    <h2>Signup</h2>
+
+    <label for="email">Email</label><br>
+    <input class="txt" type="text" name="email" placeholder="email" required><br><br>
+
+    <label for="password">Password</label><br>
+    <input id="password" class="txt" type="password" name="password" placeholder="password" required><br><br>
+
+    {{#if errorMessage}}
+      <div class="error-message">{{ errorMessage }}</div>
+    {{/if}}
+
+    <button class="btn">Create account</button>
+
+    <p>
+      Already have an account? <a href="/login">Login</a>
+    </p>
+  </form>
+</div>
+
+<script src="/javascript/strength-password/strength.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $("#password").strength();
+  });
+</script>
