@@ -1,0 +1,25 @@
+{
+  "name": "Project-2",
+  "version": "1.0.0",
+  "description": "Nuestra APP es una aplicación de e-commerce dirigida a la gente apasionada de la fotografía.\r {{Titulo}} was developed using Back-end dev(Node.js) as part of the [Ironhack](https://www.ironhack.com/) developer bootcamp (WebDev-FT-0920) using a local Data Base.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lexirem/Project-2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lexirem/Project-2/issues"
+  },
+  "homepage": "https://github.com/Lexirem/Project-2#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "handlebars": "^4.7.6",
+    "mongoose": "^5.10.11"
+  }
+}
