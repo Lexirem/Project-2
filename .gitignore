@@ -1,3 +1,19 @@
+<<<<<<< HEAD
 node_modules
 .env
 npm-debug.log
+=======
+# Dependency directory
+
+node_modules   
+
+# Debug log from npm
+
+npm-debug.log
+
+# Environment Variables should NEVER be published
+.env
+
+
+
+>>>>>>> b11952c28e8ad56cc6499def92c4954aab1e2e61

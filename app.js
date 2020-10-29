@@ -6,6 +6,7 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
+<<<<<<< HEAD
 
 const favicon = require('serve-favicon');
 const mongoose = require('mongoose');
@@ -13,6 +14,15 @@ const mongoose = require('mongoose');
 
 mongoose
   .connect('mongodb://localhost/S.M.Photography', {
+=======
+const favicon = require('serve-favicon');
+const mongoose = require('mongoose');
+
+const jwt = require("jsonwebtoken");
+
+mongoose
+  .connect('mongodb://localhost/uber-for-laundry', {
+>>>>>>> b11952c28e8ad56cc6499def92c4954aab1e2e61
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
@@ -25,9 +35,16 @@ mongoose
     console.error('Error connecting to mongo', err);
   });
 
+<<<<<<< HEAD
 const indexRouter = require('./routes/index');
 const authRouter = require('./routes/auth');
 const userRouter = require('./routes/user');
+=======
+  //*orden de los routers* authRouter tiene que ir antes de laundryRouter si queremos ver las rutas de laundry correctamente.
+const indexRouter = require('./routes/index');
+const authRouter = require('./routes/auth');
+const laundryRouter = require('./routes/laundry');
+>>>>>>> b11952c28e8ad56cc6499def92c4954aab1e2e61
 
 const app = express();
 
@@ -46,7 +63,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 
 app.use('/', indexRouter);
+<<<<<<< HEAD
 app.use("/", authRouter);
+=======
+app.use('/', authRouter);
+>>>>>>> b11952c28e8ad56cc6499def92c4954aab1e2e61
 app.use('/', laundryRouter);
 
 // catch 404 and forward to error handler
@@ -65,4 +86,10 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+<<<<<<< HEAD
 module.exports = app;
+=======
+module.exports = app;
+
+
+>>>>>>> b11952c28e8ad56cc6499def92c4954aab1e2e61

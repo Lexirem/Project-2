@@ -1,4 +1,26 @@
 <h1>{{title}}</h1>
+<<<<<<< HEAD
 <p>Welcome to {{title}}</p>
 <a href="auth/signup.hbs">Sign Up</a>
 <a href="auth/login.hbs">Login</a>
+=======
+<p> Welcome to {{ title }}. </p>
+
+{{#if isUserLoggedIn}}
+  <p> Hello, {{ currentUserInfo.name }}. </p>
+{{/if}}
+
+<nav>
+  <ul>
+    {{#if isUserLoggedIn}}
+     <li> <a href="/launderers"> Find a Launderer </a> </li>
+      <li> <a href="/dashboard"> See Dashboard </a> </li>
+      <li> <a href="/logout"> Log Out </a> </li>
+    {{else}}
+      <li> <a href="/signup"> Sign Up </a> </li>
+      <li> <a href="/login"> Log In </a> </li>
+    {{/if}}
+  </ul>
+</nav>
+
+>>>>>>> b11952c28e8ad56cc6499def92c4954aab1e2e61
