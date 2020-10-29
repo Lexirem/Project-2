@@ -1,32 +1,4 @@
 {
-<<<<<<< HEAD
-  "name": "Project-2",
-  "version": "1.0.0",
-  "description": "## Description Nuestra APP es una aplicación de e-commerce dirigida a la gente apasionada de la fotografía. {{Titulo}} was developed using Back-end dev(Node.js) as part of the [Ironhack](https://www.ironhack.com/) developer bootcamp (WebDev-FT-0920) using a local Data Base.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon app.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Lexirem/Project-2.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Lexirem/Project-2/issues"
-  },
-  "homepage": "https://github.com/Lexirem/Project-2#readme",
-  "dependencies": {
-    "express": "^4.17.1",
-    "handlebars": "^4.7.6",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.10.11",
-    "morgan": "^1.10.0",
-    "serve-favicon": "^2.5.0"
-=======
   "name": "uber-for-laundry",
   "version": "0.0.0",
   "private": true,
@@ -49,6 +21,5 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
->>>>>>> b11952c28e8ad56cc6499def92c4954aab1e2e61
   }
 }
