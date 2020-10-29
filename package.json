@@ -4,7 +4,8 @@
   "description": "## Description Nuestra APP es una aplicación de e-commerce dirigida a la gente apasionada de la fotografía. {{Titulo}} was developed using Back-end dev(Node.js) as part of the [Ironhack](https://www.ironhack.com/) developer bootcamp (WebDev-FT-0920) using a local Data Base.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,9 @@
   "dependencies": {
     "express": "^4.17.1",
     "handlebars": "^4.7.6",
-    "mongoose": "^5.10.11"
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.11",
+    "morgan": "^1.10.0",
+    "serve-favicon": "^2.5.0"
   }
 }
