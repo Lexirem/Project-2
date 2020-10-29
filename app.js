@@ -9,6 +9,8 @@ const logger = require('morgan');
 const favicon = require('serve-favicon');
 const mongoose = require('mongoose');
 
+const jwt = require("jsonwebtoken");
+
 mongoose
   .connect('mongodb://localhost/uber-for-laundry', {
     useNewUrlParser: true,
@@ -23,7 +25,10 @@ mongoose
     console.error('Error connecting to mongo', err);
   });
 
+  //*orden de los routers* authRouter tiene que ir antes de laundryRouter si queremos ver las rutas de laundry correctamente.
 const indexRouter = require('./routes/index');
+const authRouter = require('./routes/auth');
+const laundryRouter = require('./routes/laundry');
 
 const app = express();
 
@@ -42,6 +47,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 
 app.use('/', indexRouter);
+app.use('/', authRouter);
+app.use('/', laundryRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -60,3 +67,5 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+
+
