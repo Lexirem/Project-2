@@ -1,0 +1,24 @@
+<h1>{{title}}</h1>
+
+<nav>
+  <ul>
+    {{#if isUserLoggedIn}}
+      <li> <a href="/user">{{currentUserInfo.name}}</a> </li>
+      <li> <a href="/cart">Cart</a> </li> {{!-- preguntar como modificar icono segun cantidad de objetos deseados --}}
+      <li> <a href="/themes">Themes</a> </li>
+      <li> <a href="/logout"> Log Out </a> </li>
+    {{else}}
+      <li> <a href="/signup"> Sign Up </a> </li>
+      <li> <a href="/login"> Log In </a> </li>
+    {{/if}}
+  </ul>
+</nav>
+
+
+{{!-- aqui va la lista de las photos deseadas --}}
+
+
+{{!-- indicar el total de la suma de los objetos --}}
+
+{{!-- aqui va un boton de volver --}}
+{{!-- y un boton que redirige a Payments --}}

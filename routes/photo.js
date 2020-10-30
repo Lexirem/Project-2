@@ -7,4 +7,11 @@ router.get('/photo', (req, res, next) => {
     res.render('photos/onePhoto')
 });
 
+
+//indicar ruta de themes y oneTheme o crear theme file en routes
+//indicar ruta de cart
+//indicar ruta de payments
+//indicar ruta a user o podria ir en routes/index.js
+
+
 module.exports = router; 

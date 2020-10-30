@@ -5,6 +5,7 @@
     {{#if isUserLoggedIn}}
       <li> <a href="/user">{{currentUserInfo.name}}</a> </li>
       <li> <a href="/cart">Cart</a> </li>
+      <li> <a href="/themes">Themes</a> </li>
       <li> <a href="/logout"> Log Out </a> </li>
     {{else}}
       <li> <a href="/signup"> Sign Up </a> </li>
@@ -14,10 +15,11 @@
 </nav>
 
 
-{{!-- aqui va el titulo del primer theme y ejemplos de fotos de ese theme --}}
-
-
-{{!-- aqui va el titulo del segundo theme y ejemplos de fotos de ese theme --}}
-
-
-{{!-- aqui va el titulo del tercer theme y ejemplos de fotos de ese theme --}}
+<div>
+    <h1>PAYMENT</h1>
+    {{!-- pasarela de pago --}}
+    {{!-- aqui iria una info del usuario (nombre, apellidos) --}}
+    {{!-- luego va una direccion de envio --}}
+    {{!-- info del metodo de pago(tarjeta o CC) --}}
+    {{!-- boton de confirmar pago --}}
+</div>
