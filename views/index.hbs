@@ -1,15 +1,11 @@
 <h1>{{title}}</h1>
-<p> Welcome to {{ title }}. </p>
-
-{{#if isUserLoggedIn}}
-  <p> Hello, {{ currentUserInfo.name }}. </p>
-{{/if}}
 
 <nav>
   <ul>
     {{#if isUserLoggedIn}}
-     <li> <a href="/launderers"> Find a Launderer </a> </li>
-      <li> <a href="/dashboard"> See Dashboard </a> </li>
+      <li> <a href="/user">{{currentUserInfo.name}}</a> </li>
+      <li> <a href="/cart">Cart</a> </li>
+      <li> <a href="/themes">Themes</a> </li>
       <li> <a href="/logout"> Log Out </a> </li>
     {{else}}
       <li> <a href="/signup"> Sign Up </a> </li>
@@ -18,3 +14,8 @@
   </ul>
 </nav>
 
+{{!-- aqui va el carrusel de fotos --}}
+
+{{!-- aqui va ejemplos de fotos --}}
+
+{{!-- aqui ira la lista de themes --}}

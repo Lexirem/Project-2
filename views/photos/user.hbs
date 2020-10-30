@@ -1,0 +1,25 @@
+<h1>{{title}}</h1>
+
+<nav>
+  <ul>
+    {{#if isUserLoggedIn}}
+      <li> <a href="/user">{{currentUserInfo.name}}</a> </li>
+      <li> <a href="/cart">Cart</a> </li>
+      <li> <a href="/themes">Themes</a> </li>
+      <li> <a href="/logout"> Log Out </a> </li>
+    {{else}}
+      <li> <a href="/signup"> Sign Up </a> </li>
+      <li> <a href="/login"> Log In </a> </li>
+    {{/if}}
+  </ul>
+</nav>
+
+
+<div>
+    <li>My Details</li>
+    <li>My Orders</li>
+    <li>My Returns</li>
+    <li>My Favourites</li>
+    <li>My Payment Methods</li>
+    <li>My Subscriptions</li>
+</div>

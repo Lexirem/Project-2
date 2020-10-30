@@ -70,10 +70,7 @@ router.get('/login', (req, res, next) => {
   });
 
 router.post("/login", async (req, res) => { 
-    // desestructuramos el email y el password de req.body
     const { email, password } = req.body;
-  
-    // si alguna de estas variables no tiene un valor, renderizamos la vista de auth/signup con un mensaje de error
     if (email === "" || password === "") {
       res.render("auth/login", {
         errorMessage: "Please enter both, username and password to sign up.",
@@ -82,7 +79,6 @@ router.post("/login", async (req, res) => {
     }
   
     try {
-      // revisamos si el usuario existe en la BD
       const user = await User.findOne({ email });
       // si el usuario no existe, renderizamos la vista de auth/login con un mensaje de error
       if (!user) {
@@ -93,10 +89,8 @@ router.post("/login", async (req, res) => {
       }
       // si el usuario existe, hace hash del password y lo compara con el de la BD
       else if (bcrypt.compareSync(password, user.password)) {
-        // Issue token
         const userWithoutPass = await User.findOne({ email }).select("-password");
         const payload = { userID: userWithoutPass._id };
-        //console.log('payload', payload);
         // si coincide, creamos el token usando el método sign, el string de secret session y el expiring time
         const token = jwt.sign(payload, process.env.SECRET_SESSION, {
           expiresIn: "1h",
@@ -105,7 +99,6 @@ router.post("/login", async (req, res) => {
         res.cookie("token", token, { httpOnly: true });
         res.status(200).redirect("/");
       } else {
-        // en caso contrario, renderizamos la vista de auth/login con un mensaje de error
         res.render("auth/login", {
           errorMessage: "Incorrect password",
         });

@@ -12,7 +12,7 @@ const mongoose = require('mongoose');
 const jwt = require("jsonwebtoken");
 
 mongoose
-  .connect('mongodb://localhost/uber-for-laundry', {
+  .connect('mongodb://localhost/SM-Photography', {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
@@ -28,8 +28,12 @@ mongoose
   //*orden de los routers* authRouter tiene que ir antes de laundryRouter si queremos ver las rutas de laundry correctamente.
 const indexRouter = require('./routes/index');
 const authRouter = require('./routes/auth');
+<<<<<<< HEAD
 const laundryRouter = require('./routes/laundry');
 const accountRouter = require('./routes/account');
+=======
+const photoRouter = require('./routes/photo');
+>>>>>>> intermedia
 
 const app = express();
 
@@ -49,8 +53,12 @@ app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 
 app.use('/', indexRouter);
 app.use('/', authRouter);
+<<<<<<< HEAD
 app.use('/', laundryRouter);
 app.use('/', accountRouter);
+=======
+app.use('/', photoRouter);
+>>>>>>> intermedia
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
