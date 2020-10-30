@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const LaundryPickup = require('../models/laundry-pickup');
+const PhotoSchema = require('../models/photo');
 
 const withAuth = require("../helpers/middleware");
 
