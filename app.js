@@ -12,7 +12,7 @@ const mongoose = require('mongoose');
 const jwt = require("jsonwebtoken");
 
 mongoose
-  .connect('mongodb://localhost/S.M.Photography', {
+  .connect('mongodb://localhost/SM-Photography', {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })

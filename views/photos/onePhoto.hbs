@@ -1,13 +1,9 @@
 <h1>{{title}}</h1>
 
-{{#if isUserLoggedIn}}
-  <p> Hello, {{ currentUserInfo.name }}. </p>
-{{/if}}
-
 <nav>
   <ul>
     {{#if isUserLoggedIn}}
-      <li> <a href="/user">User</a> </li>
+      <li> <a href="/user">{{currentUserInfo.name}}</a> </li>
       <li> <a href="/cart">Cart</a> </li>
       <li> <a href="/themes">Themes</a> </li>
       <li> <a href="/logout"> Log Out </a> </li>
@@ -18,3 +14,14 @@
   </ul>
 </nav>
 
+<div>
+    {{#each photo}}
+    <h1>{{this.title}}</h1>
+    <img src="" alt="{{this.title}}">
+    <p>{{this.description}}</p>
+    <div>
+        <h4>Price</h4>
+        <p>{{this.price}}</p>
+    </div>
+    {{/each}}
+</div>
