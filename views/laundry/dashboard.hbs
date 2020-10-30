@@ -1,20 +1,22 @@
-<h2> Your laundry Dashboard </h2>
+<h2> User Account </h2>
 
 <ul>
-  <li> <a href="/launderers"> Find a Launderer </a> </li>
+  <li> <a href="/launderers"> My details </a> </li>
+  <li> <a href="/myOrders"> My orders </a> </li>
+  <li> <a href="/Favorites"> Favorites </a> </li>
   <li> <a href="/logout"> Log Out </a> </li>
 </ul>
 
 <div>
-  <img src="https://github.com/danieljdsgit/uber-for-laundry-es/blob/master/docs/giphy.gif?raw=true" alt="laundry">
+  <img src="user photo" alt="userphoto">
 </div>
 
 {{#if currentUserInfo.isLaunderer}}
-  <h3> You are a launderer </h3>
+  <h3> You are a customer </h3>
 
   <p>Your laundering fee is <b>${{ currentUserInfo.fee }}.</b></p>
 {{else}}
-  <h3> Want to become a launderer? </h3>
+  <h3> What is this page for? </h3>
 
   <form action="/launderers" method="post">
     <div>
@@ -22,7 +24,7 @@
       <input type="number" name="fee" id="fee-input">
     </div>
 
-    <button> Become a Launderer </button>
+    <button> Become a Photographer </button>
   </form>
 {{/if}}
 
