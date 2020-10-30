@@ -13,5 +13,9 @@ router.get('/photo', (req, res, next) => {
 //indicar ruta de payments
 //indicar ruta a user o podria ir en routes/index.js
 
+router.get('/themes', (req, res, next) => {
+    res.render('photos/themes')
+});
+
 
 module.exports = router; 
