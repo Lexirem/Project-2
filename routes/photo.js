@@ -9,9 +9,15 @@ router.get('/photo', (req, res, next) => {
 
 
 //indicar ruta de themes y oneTheme o crear theme file en routes
-//indicar ruta de cart
-//indicar ruta de payments
-//indicar ruta a user o podria ir en routes/index.js
+router.get('/themes', (req, res, next) => {
+    res.render('/photos/themes')
+});
 
+//indicar ruta de cart
+
+//indicar ruta de payments
+    //ruta get y ruta post
+//indicar ruta a user o podria ir en routes/index.js
+    //ruta get y ruta post
 
 module.exports = router; 
