@@ -14,26 +14,27 @@
 
 <body>
   <!-- Bootstrap CSS -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-<section class="navigation_bar">
-  <nav class="navbar">
-    <a class="#" href="/">
-      <img class="logo" src="/public/images/logo.png" alt="SM-Photograpylogo"></a>
-    <ul class="navbar_bar">
-      <li class="navbar_item"> <a href="/themes">Themes</a> </li>
-      {{#if isUserLoggedIn}}
-      <li class="navbar_item"> <a href="/userAccount">{{currentUserInfo.name}}</a> </li>
-      {{else}}
-      <li class="navbar_item"><a href="/signup"> Sign Up </a> </li>
-      <li class="navbar_item"><a href="/login"> Log In </a> </li>
-      {{/if}}
-      <li class="navbar_item"> <a href="/cart">Cart</a> </li>
-      <li class="navbar_item"> <a href="/logout"> Log Out </a> </li>
-    </ul>
-  </nav>
-</section>
+  <section class="navigation_bar">
+    <nav class="navbar">
+      <a class="#" href="/">
+        <img class="logo" src="/images/logo SM-Photography.png" alt="SM-Photograpylogo">
+      </a>
+      <ul class="navbar_bar">
+        <li class="navbar_item"> <a href="/themes">Themes</a> </li>
+        {{#if isUserLoggedIn}}
+        <li class="navbar_item"> <a href="/userAccount">{{currentUserInfo.name}}</a> </li>
+        {{else}}
+        <li class="navbar_item"><a href="/signup"> Sign Up </a> </li>
+        <li class="navbar_item"><a href="/login"> Log In </a> </li>
+        {{/if}}
+        <li class="navbar_item"> <a href="/cart">Cart</a> </li>
+        <li class="navbar_item"> <a href="/logout"> Log Out </a> </li>
+      </ul>
+    </nav>
+  </section>
   {{{body}}}
 </body>
 
