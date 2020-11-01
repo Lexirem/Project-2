@@ -17,5 +17,8 @@ router.get('/themes', (req, res, next) => {
     res.render('photos/themes')
 });
 
+router.get('/oneTheme', (req, res, next) => {
+    res.render('photos/oneTheme')
+});
 
 module.exports = router; 
