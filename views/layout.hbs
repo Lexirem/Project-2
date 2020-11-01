@@ -1,10 +1,37 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>{{title}}</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>S.M Photography</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <!-- * Font Awesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet" />
   </head>
   <body>
-    {{{body}}}
-  </body>
+  <!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<section class="navigation_bar">
+  <nav class="navbar">
+    <a class="#" href="/">
+      <img class="logo" src="/public/images/logo.png" alt="SM-Photograpylogo"></a>
+    <ul class="navbar_bar">
+      <li class="navbar_item"> <a href="/themes">Themes</a> </li>
+      {{#if isUserLoggedIn}}
+      <li class="navbar_item"> <a href="/userAccount">{{currentUserInfo.name}}</a> </li>
+      {{else}}
+      <li class="navbar_item"><a href="/signup"> Sign Up </a> </li>
+      <li class="navbar_item"><a href="/login"> Log In </a> </li>
+      {{/if}}
+      <li class="navbar_item"> <a href="/cart">Cart</a> </li>
+      <li class="navbar_item"> <a href="/logout"> Log Out </a> </li>
+    </ul>
+  </nav>
+</section>
+  {{{body}}}
+</body>
+
 </html>
