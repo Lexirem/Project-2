@@ -3,9 +3,9 @@ const router = express.Router();
 
 const Photo = require('../models/photo');
 
-router.get('/photo', (req, res, next) => {
+/* router.get('/photo', (req, res, next) => {
     res.render('photos/onePhoto')
-});
+}); */
 
 
 //indicar ruta de themes y oneTheme o crear theme file en routes
@@ -19,6 +19,10 @@ router.get('/themes', (req, res, next) => {
 
 router.get('/oneTheme', (req, res, next) => {
     res.render('photos/oneTheme')
+});
+
+router.get('/onePhoto', (req, res, next) => {
+    res.render('photos/onePhoto')
 });
 
 module.exports = router; 
