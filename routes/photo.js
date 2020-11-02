@@ -41,12 +41,12 @@ router.post('/payments', async (req, res, next) => {
 
 //indicar ruta a user o podria ir en routes/index.js
     //ruta get y ruta post
-// router.get('/user', (req, res, next) => {
-//     res.render('photos/user')
-// });
+router.get('/user', (req, res, next) => {
+    res.render('photos/user')
+});
 
-// router.post('/user', async (req, res, next) => {
-//     const userId = req.userID; 
-// })
+router.post('/user', async (req, res, next) => {
+    const userId = req.userID; 
+})
 
 module.exports = router; 
