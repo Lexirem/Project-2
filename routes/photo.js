@@ -25,16 +25,16 @@ router.get('/onePhoto/:id', withAuth, async (req, res, next) => {
     res.render('photos/onePhoto', {photos});
 });
 
-//indicar ruta de cart
-router.get('/cart', withAuth, (req, res, next) => {
-    res.render('photos/cart')
-});
+
 
 //indicar ruta de payments
     //ruta get y ruta post
+
+router.get('/payments', withAuth, (req, res, next) => {
+    res.render('payments')
+});    
 router.post('/payments', withAuth, async (req, res, next) => {
-    const userId = req.userID;
-    let payment = await User.findById(req.params.userID)
+    let payment = await User.findById(req.params.id)
     try{
         if(user !== null){
             
@@ -50,7 +50,7 @@ router.post('/payments', withAuth, async (req, res, next) => {
 
 //indicar ruta a user o podria ir en routes/index.js
     //ruta get y ruta post
-router.get('/user/:id', withAuth, (req, res, next) => {
+router.get('/user', withAuth, (req, res, next) => {
     res.render('photos/user');
 });
 
