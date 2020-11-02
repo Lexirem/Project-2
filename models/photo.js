@@ -5,6 +5,7 @@ const photoSchema = new Schema({
   title: {type: String},
   image: {type: String},
   description: {type: String},
+  theme: {type: String},
   price: {type: String},
   favourites: {type: Boolean}
 });
