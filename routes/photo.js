@@ -19,13 +19,15 @@ router.get('/oneTheme', withAuth, async (req, res, next) => {
     res.render('photos/oneTheme', {photos});
 });
 
-router.get('/onePhoto', withAuth, (req, res, next) => {
-    res.render('photos/onePhoto');
+router.get('/onePhoto/:id', withAuth, async (req, res, next) => {
+    const photos = await Photo.findById(req.params.Id)
+    res.render('photos/onePhoto', {photos});
 });
 
 //indicar ruta de cart
-router.get('/cart', withAuth, (req, res, next) => {
-    res.render('photos/cart')
+router.get('/cart', withAuth, async (req, res, next) => {
+    const buy = await Photo.findById(req.params.Id)
+    res.render('photos/cart', {buy})
 });
 
 //indicar ruta de payments
