@@ -7,7 +7,7 @@ mongoose.connect(`mongodb://localhost/${dbName}`, { useNewUrlParser: true, useUn
 const photos = [
   {
     title: "Man and lion",
-    image: src="/public/images/fotos-Database/B&W/b&w_belgium1.jpg",
+    image: src="/images/fotos-Database/B&W/b&w_belgium1.jpg",
     description: "Black and white photo taken in Belgium. Man and lion's profile",
     theme: "Black and white",
     price: "200$",
@@ -15,7 +15,7 @@ const photos = [
   },
   {
     title: "Cycling with the dog",
-    image: src="/public/images/fotos-Database/B&W/b&w_belgium2.jpg",
+    image: src="/images/fotos-Database/B&W/b&w_belgium2.jpg",
     description: "Cycling with the dog in the bicicle's basket in Belgium",
     theme:"Black and white",
     price: "150$",
@@ -23,7 +23,7 @@ const photos = [
   },
   {
     title: "Memorial to the Murdered Jews of Europe",
-    image: src="/public/images/fotos-Database/B&W/b&w_berlin1.jpg",
+    image: src="/images/fotos-Database/B&W/b&w_berlin1.jpg",
     description: "Memorial to remind humandkind to learn from past experiences",
     theme:"Black and white",
     price: "100$",
@@ -31,7 +31,7 @@ const photos = [
   },
   {
     title: "A wall between two generations",
-    image: src="/public/images/fotos-Database/B&W/b&w_berlin1.jpg",
+    image: src="/images/fotos-Database/B&W/b&w_berlin1.jpg",
     description: "Never forget the past, but envision a better future.",
     theme:"Black and white",
     price: "250$",
@@ -39,7 +39,7 @@ const photos = [
   },
   {
     title: "The past meets the present",
-    image: src="/public/images/fotos-Database/B&W/b&w_bratislava1.jpg",
+    image: src="/images/fotos-Database/B&W/b&w_bratislava1.jpg",
     description: "Living in a world where the past and the future are the present.",
     theme:"Black and white",
     price: "190$",

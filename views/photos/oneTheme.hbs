@@ -1,14 +1,14 @@
 {{!-- aqui va el titulo del theme y fotos de ese theme --}}
 
-<h1>{{theme}}</h1>
+<h3>{{this.theme}}</h3>
 {{#each photos}}
 <h2>{{this.title}}</h2>
 <a class="#" href="/onePhoto/{{_id}}">
-    <img class="#"
-        src="{{this.photoUrl}}"
+    <img class="image"
+        src="{{this.image}}"
         alt="{{this.title}}">
 </a>
 <p>Description: {{this.description}}</p>
 <h4>Price: {{this.price}}</h4>
-<button class="#">Add to cart</button>
+<button class="addToCart">Add to cart</button>
 {{/each}}

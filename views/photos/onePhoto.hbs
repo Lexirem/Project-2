@@ -1,14 +1,11 @@
 <div>
-    {{#each photo}}
-    <h1>{{this.title}}</h1>
-    <img src="{{this.photo}}" alt="{{this.title}}">
-    <p>Description: {{this.description}}</p>
+    <h1>{{photos.title}}</h1>
+    <img src="{{photos.image}}" alt="{{photos.title}}">
+    <p>Description: {{photos.description}}</p>
     <div>
         <h4>Price</h4>
-        <p>{{this.price}}</p>
+        <p>{{photos.price}}</p>
     </div>
     <button class="#">Add to cart</button>
-    {{/each}}
-</div>
+    </div>
 
-{{!-- aqui irian sugerencias de otras fotos del mismo theme --}}
