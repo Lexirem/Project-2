@@ -3,18 +3,18 @@ const router = express.Router();
 
 const Photo = require('../models/photo');
 
-/* router.get('/photo', (req, res, next) => {
-    res.render('photos/onePhoto')
-}); */
-
 
 //indicar ruta de themes y oneTheme o crear theme file en routes
 router.get('/themes', (req, res, next) => {
-    res.render('photos/themes')
+    res.render('photos/themes');
 });
 
 router.get('/oneTheme', (req, res, next) => {
-    res.render('photos/oneTheme')
+    res.render('photos/oneTheme');
+});
+
+router.get('/onePhoto', (req, res, next) => {
+    res.render('photos/onePhoto');
 });
 
 //indicar ruta de cart
@@ -42,19 +42,12 @@ router.post('/payments', async (req, res, next) => {
 //indicar ruta a user o podria ir en routes/index.js
     //ruta get y ruta post
 router.get('/user', (req, res, next) => {
-    res.render('photos/user')
+    res.render('photos/user');
 });
 
-router.get('/themes', (req, res, next) => {
-    res.render('photos/themes')
-});
+router.get('/userAccount', (req, res, next) => {
+    res.render('photos/userAccount');
+})
 
-router.get('/oneTheme', (req, res, next) => {
-    res.render('photos/oneTheme')
-});
-
-router.get('/onePhoto', (req, res, next) => {
-    res.render('photos/onePhoto')
-});
 
 module.exports = router; 
