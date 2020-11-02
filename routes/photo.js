@@ -4,18 +4,22 @@ const withAuth = require("../helpers/middleware");
 
 
 const Photo = require('../models/photo');
+const User = require("../models/user");
 
 
 //indicar ruta de themes y oneTheme o crear theme file en routes
-router.get('/themes', (req, res, next) => {
-    res.render('photos/themes');
+router.get('/themes', withAuth, async (req, res, next) => {
+    const photos = await Photo.find()
+    res.render('photos/themes', {photos});
 });
 
-router.get('/oneTheme', (req, res, next) => {
-    res.render('photos/oneTheme');
+router.get('/oneTheme', withAuth, async (req, res, next) => {
+    const photos = await Photo.find({theme: "Black and white"})
+    console.log(photos)
+    res.render('photos/oneTheme', {photos});
 });
 
-router.get('/onePhoto', (req, res, next) => {
+router.get('/onePhoto', withAuth, (req, res, next) => {
     res.render('photos/onePhoto');
 });
 
@@ -28,6 +32,7 @@ router.get('/cart', withAuth, (req, res, next) => {
     //ruta get y ruta post
 router.post('/payments', withAuth, async (req, res, next) => {
     const userId = req.userID;
+    let payment = await User.findById(req.params.userID)
     try{
         if(user !== null){
             
@@ -43,7 +48,7 @@ router.post('/payments', withAuth, async (req, res, next) => {
 
 //indicar ruta a user o podria ir en routes/index.js
     //ruta get y ruta post
-router.get('/user', withAuth, (req, res, next) => {
+router.get('/user/:id', withAuth, (req, res, next) => {
     res.render('photos/user');
 });
 

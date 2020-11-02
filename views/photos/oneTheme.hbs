@@ -1,12 +1,14 @@
 {{!-- aqui va el titulo del theme y fotos de ese theme --}}
 
-<h1>Selected Theme</h1>
-
-<h2>(`${title}`)</h2>
-<a class="#" href="/onePhoto">
+<h1>{{theme}}</h1>
+{{#each photos}}
+<h2>{{this.title}}</h2>
+<a class="#" href="/onePhoto/{{_id}}">
     <img class="#"
-        src="https://res.cloudinary.com/mscsam/image/upload/c_thumb,w_200,g_face/v1604175056/Landscape/lands_niort1_inbwvd.jpg"
-        alt="test">
+        src="{{this.photoUrl}}"
+        alt="{{this.title}}">
 </a>
-<p>description</p>
-<h4>Price $</h4>
+<p>Description: {{this.description}}</p>
+<h4>Price: {{this.price}}</h4>
+<button class="#">Add to cart</button>
+{{/each}}
