@@ -15,12 +15,13 @@ router.get('/themes', withAuth, async (req, res, next) => {
 
 router.get('/oneTheme', withAuth, async (req, res, next) => {
     const photos = await Photo.find({theme: "Black and white"})
-    console.log(photos)
     res.render('photos/oneTheme', {photos});
 });
 
 router.get('/onePhoto/:id', withAuth, async (req, res, next) => {
-    const photos = await Photo.findById(req.params.Id)
+    //console.log(req.params.id)
+    const photos = await Photo.findById(req.params.id)
+    //console.log(photos)
     res.render('photos/onePhoto', {photos});
 });
 

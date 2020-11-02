@@ -44,9 +44,24 @@ const photos = [
     theme:"Black and white",
     price: "190$",
     favourites: true,
+  },
+  {
+    title: "Lifetime Path",
+    image: src="/images/fotos-Database/B&W/b&w_bratislava2.jpg",
+    description: "Life is not made of a straight line.",
+    theme:"Black and white",
+    price: "290$",
+    favourites: true,
+  },
+  {
+    title: "Széchenyi Chain Bridge",
+    image: src="/images/fotos-Database/B&W/b&w_budapest1.jpg",
+    description: "Bridge Széchenyi Lánchíd in Budapest",
+    theme:"Black and white",
+    price: "290$",
+    favourites: true,
   }
 ]
-
 
 Photo.create(photos, (err) => {
     if (err) { throw(err) }

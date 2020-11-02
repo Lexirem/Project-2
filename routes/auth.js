@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 const bcrypt = require('bcryptjs');
-const bcryptSalt = 10; 
+const bcryptSalt = 10;
 
 const jwt = require("jsonwebtoken");
 
@@ -11,27 +11,46 @@ const User = require('../models/user');
 const withAuth = require("../helpers/middleware");
 
 router.get("/signup", (req, res, next) => {
-    res.render("auth/signup", {
-        errorMessage: ""
-    });
+  res.render("auth/signup", {
+    errorMessage: ""
+  });
 });
 
-router.post("/signup", async (req, res, next) => { 
-    const { name, email, password } = req.body;
-  
-    if (email === "" || password === "" || name === "") {
+router.post("/signup", async (req, res, next) => {
+  const { name, email, password } = req.body;
+
+  if (email === "" || password === "" || name === "") {
+    res.render("auth/signup", {
+      errorMessage: "Enter name, email and password to sign up.",
+    });
+    return;
+  }
+
+  try {
+    const existingUser = await User.findOne({ email });
+
+    if (existingUser !== null) {
       res.render("auth/signup", {
-        errorMessage: "Enter name, email and password to sign up.",
+        errorMessage: `The email ${email} is already in use.`,
       });
       return;
     }
-  
-    try {
-      const existingUser = await User.findOne({ email });
-  
-      if (existingUser !== null) {
+
+    const salt = bcrypt.genSaltSync(bcryptSalt);
+    const hashedPass = bcrypt.hashSync(password, salt);
+
+    const userSubmission = {
+      name: name,
+      email: email,
+      password: hashedPass,
+    };
+
+    const theUser = new User(userSubmission);
+
+    theUser.save((err) => {
+      if (err) {
         res.render("auth/signup", {
-          errorMessage: `The email ${email} is already in use.`,
+          errorMessage: "Something went wrong. Try again later.",
         });
         return;
       }
@@ -67,13 +86,33 @@ router.get('/login', (req, res, next) => {
     res.render('auth/login', {
       errorMessage: ''
     });
-  });
+  } catch (error) {
+    next(error);
+    return;
+  }
+});
 
-router.post("/login", async (req, res) => { 
-    const { email, password } = req.body;
-    if (email === "" || password === "") {
+router.get('/login', (req, res, next) => {
+  res.render('auth/login', {
+    errorMessage: ''
+  });
+});
+
+router.post("/login", async (req, res) => {
+  const { email, password } = req.body;
+  if (email === "" || password === "") {
+    res.render("auth/login", {
+      errorMessage: "Please enter both, username and password to sign up.",
+    });
+    return;
+  }
+
+  try {
+    const user = await User.findOne({ email });
+    // si el usuario no existe, renderizamos la vista de auth/login con un mensaje de error
+    if (!user) {
       res.render("auth/login", {
-        errorMessage: "Please enter both, username and password to sign up.",
+        errorMessage: "The email doesn't exist.",
       });
       return;
     }
@@ -106,12 +145,15 @@ router.post("/login", async (req, res) => {
     } catch (error) {
       console.log(error);
     }
-  });
-  
-  router.get("/logout", withAuth, (req, res) => {
-    // seteamos el token con un valor vacío y una fecha de expiración en el pasado (Jan 1st 1970 00:00:00 GMT)
-    res.cookie("token", "", { expires: new Date(0) });
-    res.redirect("/");
-  });
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+router.get("/logout", withAuth, (req, res) => {
+  // seteamos el token con un valor vacío y una fecha de expiración en el pasado (Jan 1st 1970 00:00:00 GMT)
+  res.cookie("token", "", { expires: new Date(0) });
+  res.redirect("/");
+});
 
 module.exports = router;
