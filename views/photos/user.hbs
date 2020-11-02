@@ -1,25 +1,52 @@
-<h1>{{title}}</h1>
-
-<nav>
-  <ul>
-    {{#if isUserLoggedIn}}
-      <li> <a href="/user">{{currentUserInfo.name}}</a> </li>
-      <li> <a href="/cart">Cart</a> </li>
-      <li> <a href="/themes">Themes</a> </li>
-      <li> <a href="/logout"> Log Out </a> </li>
-    {{else}}
-      <li> <a href="/signup"> Sign Up </a> </li>
-      <li> <a href="/login"> Log In </a> </li>
-    {{/if}}
-  </ul>
-</nav>
-
-
-<div>
-    <li>My Details</li>
-    <li>My Orders</li>
-    <li>My Returns</li>
-    <li>My Favourites</li>
-    <li>My Payment Methods</li>
-    <li>My Subscriptions</li>
+<a href="/userAccount">
+  <h3>My account</h3>
+</a>
+<p>Hello {{currentUserInfo.name}}, welcome to your account. Here you can modify your personal information, track your
+  orders or manage your Favorites.</p>
+<div class="#">
+  <h3>My details</h3>
+  <div class="#">
+    <p>Edit your personal details.</p>
+  </div>
 </div>
+<br>
+
+<a href="/myOrders">
+  <h3>My Orders</h3>
+</a>
+<p>Hello {{currentUserInfo.name}}, welcome to your account. Here you can modify your personal information, track your
+  orders or manage your Favorites.</p>
+<div class="#">
+  <h3>My details</h3>
+  <div class="#">
+    <p>Edit your personal details.</p>
+  </div>
+</div>
+<br>
+
+<a href="/returns">
+  <h3>Returns</h3>
+</a>
+<p>Hello {{currentUserInfo.name}}, welcome to your account. Here you can modify your personal information, track your
+  orders or manage your Favorites.</p>
+<div class="#">
+  <h3>My details</h3>
+  <div class="#">
+    <p>Edit your personal details.</p>
+  </div>
+</div>
+<br>
+
+<a href="/favorites">
+  <h3>Favourites</h3>
+</a>
+<p>Hello {{currentUserInfo.name}}, welcome to your account. Here you can modify your personal information, track your
+  orders or manage your Favorites.</p>
+<div class="#">
+  <h3>My details</h3>
+  <div class="#">
+    <p>Edit your personal details.</p>
+  </div>
+</div>
+<br>
+
