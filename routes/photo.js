@@ -1,5 +1,7 @@
 const express = require("express");
 const router = express.Router();
+const withAuth = require("../helpers/middleware");
+
 
 const Photo = require('../models/photo');
 
@@ -18,13 +20,13 @@ router.get('/onePhoto', (req, res, next) => {
 });
 
 //indicar ruta de cart
-router.get('/cart', (req, res, next) => {
+router.get('/cart', withAuth, (req, res, next) => {
     res.render('photos/cart')
 });
 
 //indicar ruta de payments
     //ruta get y ruta post
-router.post('/payments', async (req, res, next) => {
+router.post('/payments', withAuth, async (req, res, next) => {
     const userId = req.userID;
     try{
         if(user !== null){
@@ -41,11 +43,11 @@ router.post('/payments', async (req, res, next) => {
 
 //indicar ruta a user o podria ir en routes/index.js
     //ruta get y ruta post
-router.get('/user', (req, res, next) => {
+router.get('/user', withAuth, (req, res, next) => {
     res.render('photos/user');
 });
 
-router.get('/userAccount', (req, res, next) => {
+router.get('/userAccount', withAuth, (req, res, next) => {
     res.render('photos/userAccount');
 })
 
