@@ -20,7 +20,7 @@ router.get('/oneTheme', withAuth, async (req, res, next) => {
 });
 
 router.get('/onePhoto/:id', withAuth, async (req, res, next) => {
-    const photos = await Photo.findById(req.params.Id)
+    const photos = await Photo.findById(req.params.id)
     res.render('photos/onePhoto', {photos});
 });
 
