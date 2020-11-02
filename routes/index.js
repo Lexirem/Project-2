@@ -14,9 +14,9 @@ router.get('/', withAuth, function(req, res, next) {
 });
 
 /* route for cart. */
-router.get("/cart", (req, res, next) =>{
-  res.render("photos/cart");
-}); 
+// router.get("/cart", (req, res, next) =>{
+//   res.render("photos/cart");
+// }); 
 
 /*
 app.get("/search",  (req, res, next) => {

@@ -25,7 +25,7 @@
       <ul class="navbar_bar">
         <li class="navbar_item"> <a href="/themes">Themes</a> </li>
         {{#if isUserLoggedIn}}
-        <li class="navbar_item"> <a href="/userAccount">{{currentUserInfo.name}}</a> </li>
+        <li class="navbar_item"> <a href="/user">{{currentUserInfo.name}}</a> </li>
         {{else}}
         <li class="navbar_item"><a href="/signup"> Sign Up </a> </li>
         <li class="navbar_item"><a href="/login"> Log In </a> </li>
@@ -35,7 +35,26 @@
       </ul>
     </nav>
   </section>
+
   {{{body}}}
 </body>
 
 </html>
+
+
+
+{{!-- navbar responsive--}}
+{{!-- <div class="fixed-top">
+  <div class="collapse" id="navbarToggleExternalContent">
+    <div class="bg-dark p-4">
+      <h5 class="text-white h4">Collapsed content</h5>
+      <span class="text-muted">Toggleable via the navbar brand.</span>
+    </div>
+  </div>
+  <nav class="navbar navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+</div> --}}
+

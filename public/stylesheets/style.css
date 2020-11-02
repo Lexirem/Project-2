@@ -1,7 +1,6 @@
 /* General */
 
-html,
-body {
+html, body {
   font-size: 100%;
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -10,25 +9,22 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-a,
-a:visited,
-a:hover {
+a, a:visited, a:hover {
   text-decoration: none;
   color: orange;
   cursor: pointer;
 }
 
-ul 
-li{
+ul li{
   display: inline-block; 
   padding:10px;
   font-size:10px; 
-  font-family:raleway;
+  font-family: raleway;
 }
 
 ul li:hover{
   color:orange;
-  }
+}
 
 /* Navigation Bar */
 
@@ -51,14 +47,18 @@ ul li:hover{
 }
 
 .logo {
-  float: left;
+  justify-content: left;
   display: inline-block;
   vertical-align: top;
   width: 70px;
   height: 70px;
   margin-right: 15px;
   margin-top: 15px;    /* if you want it vertically middle of the navbar. */ 
-} 
+}
+
+
+
+
 
 
 
