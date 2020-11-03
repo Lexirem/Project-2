@@ -3,6 +3,8 @@ const Photo = require('../models/photo');
 
 const dbName = 'SM-Photography';
 mongoose.connect(`mongodb://localhost/${dbName}`, { useNewUrlParser: true, useUnifiedTopology: true } );
+Photo.collection.drop();
+
 
 const photos = [
   {
@@ -31,7 +33,7 @@ const photos = [
   },
   {
     title: "A wall between two generations",
-    image: src="/images/fotos-Database/B&W/b&w_berlin1.jpg",
+    image: src="/images/fotos-Database/B&W/b&w_berlin2.jpg",
     description: "Never forget the past, but envision a better future.",
     theme:"Black and white",
     price: "250$",
@@ -44,7 +46,7 @@ const photos = [
     theme:"Black and white",
     price: "190$",
     favourites: true,
-  }
+  },
   {
     title: "Lifetime Path",
     image: src="/images/fotos-Database/B&W/b&w_bratislava2.jpg",
@@ -52,7 +54,7 @@ const photos = [
     theme:"Black and white",
     price: "290$",
     favourites: true,
-  }
+  },
   {
     title: "Széchenyi Chain Bridge",
     image: src="/images/fotos-Database/B&W/b&w_budapest1.jpg",

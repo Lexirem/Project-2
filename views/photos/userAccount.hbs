@@ -5,22 +5,22 @@
 <form action="/signup" method="post">
     <div>
         <label for="name-input"> Name </label>
-        <input type="text" name="name" id="name-input" placeholder="{{userName}}">
+        <input type="text" name="name" id="name-input" value="{{currentUserInfo.name}}">
     </div>
 
     <div>
         <label for="email-input"> Email </label>
-        <input type="email" name="email" id="email-input" placeholder="{{userEmail}}">
+        <input type="email" name="email" id="email-input" value="{{currentUserInfo.email}}">
     </div>
 
     <div>
         <label for="email-input"> Address </label>
-        <input type="email" name="email" id="email-input" placeholder="{{userAddress}}">
+        <input type="email" name="email" id="email-input" value="{{userAddress}}">
     </div>
 
     <div>
         <label for="password-input"> Password </label>
-        <input type="password" name="password" id="password-input" placeholder="••••••••••••">
+        <input type="password" name="password" id="password-input" value="••••••••••••">
     </div>
 
     <button> save changes </button>
