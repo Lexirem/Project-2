@@ -54,8 +54,37 @@ router.post("/signup", async (req, res, next) => {
         });
         return;
       }
-
-      res.redirect("/login");
+  
+      const salt = bcrypt.genSaltSync(bcryptSalt);
+      const hashedPass = bcrypt.hashSync(password, salt);
+  
+      const userSubmission = {
+        name: name,
+        email: email,
+        password: hashedPass,
+      };
+  
+      const theUser = new User(userSubmission);
+  
+      theUser.save((err) => {
+        if (err) {
+          res.render("auth/signup", {
+            errorMessage: "Something went wrong. Try again later.",
+          });
+          return;
+        }
+  
+        res.redirect("/login");
+      });
+    } catch (error) {
+      next(error);
+      return;
+    }
+  });
+  
+router.get('/login', (req, res, next) => {
+    res.render('auth/login', {
+      errorMessage: ''
     });
   } catch (error) {
     next(error);
@@ -87,21 +116,34 @@ router.post("/login", async (req, res) => {
       });
       return;
     }
-    // si el usuario existe, hace hash del password y lo compara con el de la BD
-    else if (bcrypt.compareSync(password, user.password)) {
-      const userWithoutPass = await User.findOne({ email }).select("-password");
-      const payload = { userID: userWithoutPass._id };
-      // si coincide, creamos el token usando el método sign, el string de secret session y el expiring time
-      const token = jwt.sign(payload, process.env.SECRET_SESSION, {
-        expiresIn: "4h",
-      });
-      // enviamos en la respuesta una cookie con el token y luego redirigimos a la home
-      res.cookie("token", token, { httpOnly: true });
-      res.status(200).redirect("/");
-    } else {
-      res.render("auth/login", {
-        errorMessage: "Incorrect password",
-      });
+  
+    try {
+      const user = await User.findOne({ email });
+      // si el usuario no existe, renderizamos la vista de auth/login con un mensaje de error
+      if (!user) {
+        res.render("auth/login", {
+          errorMessage: "The email doesn't exist.",
+        });
+        return;
+      }
+      // si el usuario existe, hace hash del password y lo compara con el de la BD
+      else if (bcrypt.compareSync(password, user.password)) {
+        const userWithoutPass = await User.findOne({ email }).select("-password");
+        const payload = { userID: userWithoutPass._id };
+        // si coincide, creamos el token usando el método sign, el string de secret session y el expiring time
+        const token = jwt.sign(payload, process.env.SECRET_SESSION, {
+          expiresIn: "4h",
+        });
+        // enviamos en la respuesta una cookie con el token y luego redirigimos a la home
+        res.cookie("token", token, { httpOnly: true });
+        res.status(200).redirect("/");
+      } else {
+        res.render("auth/login", {
+          errorMessage: "Incorrect password",
+        });
+      }
+    } catch (error) {
+      console.log(error);
     }
   } catch (error) {
     console.log(error);
