@@ -8,5 +8,10 @@ router.get('/', withAuth, function(req, res, next) {
   res.render('index', { title: 'SM-Photography' });
 });
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> rama-meritxell
 
 module.exports = router;
