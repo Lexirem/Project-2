@@ -9,14 +9,15 @@ const Cart = require('../models/cart');
 
 //indicar ruta de cart
 router.get('/cart', withAuth, (req, res, next) => {
-    console.log('hola', Cart.items);
+    // console.log('hola', Cart.items);
+    console.log('REQ SESSION CAAAAAAART', req.sessions.cart)
     res.render('photos/cart')
 });
 
 //ruta para añadir foto al carrito
 router.get('/add-to-cart/:id', withAuth, async (req, res, next) => {
     const photoId = await Photo.findById(req.params.id);
-    // const user = await User.findById(res.locals.currentUserInfo._id);
+    //const user = await User.findById(res.locals.currentUserInfo._id);
     let cart = new Cart(req.session.cart ? req.session.cart : {items: {} } );
     console.log(cart.items);
     Photo.findById(photoId, function(err, photo){
@@ -25,8 +26,9 @@ router.get('/add-to-cart/:id', withAuth, async (req, res, next) => {
         }
         cart.add(photo, photo.id)
         req.session.cart = cart;
+        console.log('CART CONSOLE LOOOOOOOGGGGG', cart)
         console.log(req.session.cart)
-        res.redirect('/cart');
+        res.render('photos/cart');
     });
 
 });

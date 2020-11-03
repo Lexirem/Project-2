@@ -9,8 +9,8 @@
 <h3>This is your cart</h3>
 
 <h1>{{this.item.title}}</h1>
-<form id="shopping-cart" action="/cart" method="GET">
-{{#each photos}}
+<form id="shopping-cart" action="/add-to-cart" method="GET">
+
     <table class="shopping-cart">
         <thead>
             <tr>
@@ -19,10 +19,16 @@
                 <th scope="col">Price</th>
             </tr>
         </thead>
-        <tbody></tbody>
+        <tbody>
+            <tr>{{#each cart}}
+                <th>{{cart.image}}</th>
+                <th>{{cart.item.qty}}</th>
+                <th>{{this.price}}</th>
+            {{/each}}</tr>
+        </tbody>
     </table>
 
-    {{/each}}
+    
     <p id="sub-total">
         <strong>Sub Total</strong>: <span id="stotal"></span>
     </p>
