@@ -30,7 +30,7 @@
         <li class="navbar_item"><a href="/signup"> Sign Up </a> </li>
         <li class="navbar_item"><a href="/login"> Log In </a> </li>
         {{/if}}
-        <li class="navbar_item"> <a href="/cart">Cart</a> </li>
+        <li class="navbar_item"> <a href="/cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Cart<span class="badge">{{session.cart.totalQty}}</span></a> </li>
         <li class="navbar_item"> <a href="/logout"> Log Out </a> </li>
       </ul>
     </nav>
