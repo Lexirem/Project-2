@@ -14,5 +14,5 @@
 </a>
 <p>Description: {{this.description}}</p>
 <h4>Price: {{this.price}}</h4>
-<button class="addToCart">Add to cart</button>
+<form action="/add-to-cart/{{this._id}}" method="GET"><button class="addToCart" type="submit">Add to cart</button></form>
 {{/each}}
