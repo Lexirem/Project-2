@@ -1,8 +1,8 @@
 <h3>This is your cart</h3>
 
-{{# if photos}} {{/if}}
-{{else}}
-<form id="shopping-cart" action="cart.html" method="post">
+<h1>{{this.item.title}}</h1>
+<form id="shopping-cart" action="/cart" method="GET">
+{{#each photos}}
     <table class="shopping-cart">
         <thead>
             <tr>
@@ -13,6 +13,8 @@
         </thead>
         <tbody></tbody>
     </table>
+
+    {{/each}}
     <p id="sub-total">
         <strong>Sub Total</strong>: <span id="stotal"></span>
     </p>

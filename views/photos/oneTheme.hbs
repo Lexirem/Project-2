@@ -4,11 +4,15 @@
 {{#each photos}}
 <h2>{{this.title}}</h2>
 <a class="#" href="/onePhoto/{{_id}}">
+<<<<<<< HEAD
+    <img class="#"
+=======
     <img class="image"
+>>>>>>> 0748ef340320fb90b769c7844b68f39d873075cc
         src="{{this.image}}"
         alt="{{this.title}}">
 </a>
 <p>Description: {{this.description}}</p>
 <h4>Price: {{this.price}}</h4>
-<button class="addToCart">Add to cart</button>
+<form action="/add-to-cart/{{this._id}}" method="GET"><button class="addToCart" type="submit">Add to cart</button></form>
 {{/each}}

@@ -5,7 +5,8 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
-// const photos = require('./seed.js');
+const session = require('express-session');
+const MongoStore = require('connect-mongo')(session);
 
 const favicon = require('serve-favicon');
 const mongoose = require('mongoose');
@@ -30,7 +31,7 @@ mongoose
 const indexRouter = require('./routes/index');
 const authRouter = require('./routes/auth');
 const photoRouter = require('./routes/photo');
-const cartRouter = require('./routes/cart');
+const cartRouter = require('./routes/cart')
 
 const app = express();
 
@@ -45,6 +46,19 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(session({
+  secret: 'mysupersecret', 
+  resave: false, 
+  saveUninitialized: false,
+  store: new MongoStore({ mongooseConnection: mongoose.connection}),
+  cookie: { maxAge : 160 * 60 * 1000 }
+}));
+
+// app.use(function(req,res,next){
+//   res.locals.login = req.isAuthenticated();
+//   res.locals.session = req.session;
+//   next();
+// });
 
 app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 

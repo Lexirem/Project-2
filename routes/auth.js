@@ -46,27 +46,8 @@ router.post("/signup", async (req, res, next) => {
     };
 
     const theUser = new User(userSubmission);
-
+  
     theUser.save((err) => {
-      if (err) {
-        res.render("auth/signup", {
-          errorMessage: "Something went wrong. Try again later.",
-        });
-        return;
-      }
-  
-      const salt = bcrypt.genSaltSync(bcryptSalt);
-      const hashedPass = bcrypt.hashSync(password, salt);
-  
-      const userSubmission = {
-        name: name,
-        email: email,
-        password: hashedPass,
-      };
-  
-      const theUser = new User(userSubmission);
-  
-      theUser.save((err) => {
         if (err) {
           res.render("auth/signup", {
             errorMessage: "Something went wrong. Try again later.",
@@ -76,27 +57,23 @@ router.post("/signup", async (req, res, next) => {
   
         res.redirect("/login");
       });
-    } catch (error) {
-      next(error);
-      return;
-    }
-  });
+  } catch (error) {
+    next(error);
+    return;
+  } 
+});
   
 router.get('/login', (req, res, next) => {
-    res.render('auth/login', {
+    try{
+     res.render('auth/login', {
       errorMessage: ''
     });
-  } catch (error) {
+    } catch (error) {
     next(error);
     return;
   }
 });
 
-router.get('/login', (req, res, next) => {
-  res.render('auth/login', {
-    errorMessage: ''
-  });
-});
 
 router.post("/login", async (req, res) => {
   const { email, password } = req.body;
@@ -115,19 +92,7 @@ router.post("/login", async (req, res) => {
         errorMessage: "The email doesn't exist.",
       });
       return;
-    }
-  
-    try {
-      const user = await User.findOne({ email });
-      // si el usuario no existe, renderizamos la vista de auth/login con un mensaje de error
-      if (!user) {
-        res.render("auth/login", {
-          errorMessage: "The email doesn't exist.",
-        });
-        return;
-      }
-      // si el usuario existe, hace hash del password y lo compara con el de la BD
-      else if (bcrypt.compareSync(password, user.password)) {
+    }else if (bcrypt.compareSync(password, user.password)) {
         const userWithoutPass = await User.findOne({ email }).select("-password");
         const payload = { userID: userWithoutPass._id };
         // si coincide, creamos el token usando el método sign, el string de secret session y el expiring time
@@ -145,9 +110,6 @@ router.post("/login", async (req, res) => {
     } catch (error) {
       console.log(error);
     }
-  } catch (error) {
-    console.log(error);
-  }
 });
 
 router.get("/logout", withAuth, (req, res) => {
