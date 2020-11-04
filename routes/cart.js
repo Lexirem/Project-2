@@ -11,7 +11,7 @@ router.get('/cart', withAuth, async (req, res, next) => {
     let idUser = req.userID;
     let user = await User.findById(idUser).populate("cart");
     let userPhotos = user.cart;
-    console.log(userPhotos)
+    // console.log(userPhotos)
     res.render('photos/cart', {userPhotos});
 });
 
@@ -20,7 +20,7 @@ router.post('/add-to-cart/:id', withAuth, async (req, res, next) => {
     let idPhoto = req.params.id;
     let idUser = req.userID;
     try{
-        let user = await User.findByIdAndUpdate(idUser, {$push: {cart: idPhoto}}, {new: true} );
+        let user = await User.findByIdAndUpdate(idUser, {$addToSet: {cart: idPhoto}}, {new: true} );
         // console.log(user)
         res.redirect('/cart');
     } catch (err) {
@@ -30,6 +30,20 @@ router.post('/add-to-cart/:id', withAuth, async (req, res, next) => {
 
 });
 
+//ruta para eliminar una foto del carrito
+router.post('/delete/:id', withAuth, async (req, res, next) => {
+    let idPhoto = req.params.id;
+    let idUser = req.userID;
+    try{
+        let user = await User.findByIdAndUpdate(idUser, {$pull: {cart: idPhoto}}, {new: true} );
+        console.log(user)
+        res.redirect('/cart');
+    } catch (err) {
+        console.log(err)
+        next(err);
+    }
+
+});
 
 
 module.exports = router;
