@@ -1,20 +1,6 @@
 <h3>This is your cart</h3>
 
 <form id="shopping-cart" action="/cart" method="GET">
-</form>
-<ul>
-    <li>
-        Item {{this.title}}
-    </li>
-    <li>
-        Qty {{this.qty}}
-    </li>
-    <li>
-        Price {{this.price}}
-    </li>
-</ul>
-
-{{!-- <form id="shopping-cart" action="/cart" method="GET">
 
     <table class="shopping-cart">
         <thead>
@@ -24,9 +10,16 @@
                 <th scope="col">Price {{this.price}}</th>
             </tr>
         </thead>
-        <tbody></tbody>
+        <tbody>
+            <tr>{{#each userPhotos}}
+                <th><img class="image" src={{this.image}}></th>
+                <th>qty</th>
+                <th>{{this.price}}</th>
+            {{/each}}</tr>
+        </tbody>
     </table>
- --}}
+
+    
     <p id="sub-total">
         <strong>Sub Total {{totalPrice}}</strong>: <span id="stotal"></span>
     </p>
