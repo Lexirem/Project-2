@@ -9,7 +9,10 @@ const User = require("../models/user");
 
 //ruta de Themes:
 router.get('/themes', withAuth, async (req, res, next) => {
-    const photos = await Photo.find()
+    let counter = await Photo.count();
+    console.log(counter);
+    let random = Math.floor(Math.random() * counter);
+    const photos = await Photo.find().skip(random).limit(3);
     res.render('photos/themes', {photos});
 });
 
@@ -47,7 +50,9 @@ router.get('/onePhoto/:id', withAuth, async (req, res, next) => {
 
 //ruta de Payments:
 router.get('/payments', withAuth, (req, res, next) => {
-    res.render('payments')
+    let user = req.userID;
+
+    res.render('photos/payments')
 });    
 router.post('/payments', withAuth, async (req, res, next) => {
     let payment = await User.findById(req.params.id)
