@@ -23,7 +23,9 @@
             <tr>{{#each userPhotos}}
                 <th><img class="image" src={{this.image}}></th>
                 <th>qty</th>
-                <th>{{this.price}}</th>
+                <th>{{this.price}}</th>                
+                <th><form action="/delete/{{this._id}}" method="POST"><button type="submit" name="delete" class="btn" value="Delete">Delete</button></form></th>
+                <br>
             {{/each}}</tr>
         </tbody>
     </table>
