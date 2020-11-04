@@ -2,20 +2,6 @@ const express = require("express");
 const router = express.Router();
 const withAuth = require("../helpers/middleware");
 
-<<<<<<< HEAD
-const Photo = require('../models/photo');
-const User = require("../models/user");
-
-
-
-//indicar ruta de cart
-router.get('/cart', withAuth, (req, res, next) => {
-    res.render('photos/cart')
-});
-
-
-module.exports = router; 
-=======
 
 const Photo = require('../models/photo');
 const User = require("../models/user");
@@ -54,4 +40,3 @@ router.get('/cart', function(req, res, next) {
 });
 
 module.exports = router;
->>>>>>> intermedia

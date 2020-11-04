@@ -64,12 +64,7 @@ router.post('/payments', withAuth, async (req, res, next) => {
 })
 
 
-<<<<<<< HEAD
-//indicar ruta a user o podria ir en routes/index.js
-    //ruta get y ruta post
-=======
 //ruta de User y User Account:
->>>>>>> intermedia
 router.get('/user', withAuth, (req, res, next) => {
     res.render('photos/user');
 });

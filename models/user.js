@@ -5,7 +5,7 @@ const userSchema = new Schema({
   name: String,
   email: String,
   password: String,
-  cart: [],
+  /* cart: [], */
 });
 
 userSchema.set('timestamps', true);
