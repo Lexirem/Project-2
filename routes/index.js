@@ -9,6 +9,4 @@ router.get('/', withAuth, function(req, res, next) {
 });
 
 
-
-
 module.exports = router;

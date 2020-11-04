@@ -1,26 +1,24 @@
 <section>
-  
   <a href="/oneTheme/blackandwhite" class='#'>
     <h2>Black and White</h2>
   </a>
   <br>
-  {{#each photosblackandwhite }}
+  {{#each photosblackandwhite}}
   <div class="photo-block">
     <a href="/onePhoto/{{this._id}}">
       <img class="image" src="{{this.image}}" alt="{{this.title}}">
     </a>
   </div>
   {{/each}}
-<br>
+  <br>
 
   <a href="/oneTheme/urban" class='#'>
     <h2>Urban</h2>
   </a>
   <br>
-  {{#each photosurban}}
+  {{#each photosUrban}}
   <div class="photo-block">
-    <article class="c-card" data-pid="{{this._id}}" data-name="{{this.name}}"></article>
-    <a href="/onePhoto/:id">
+    <a href="/onePhoto/{{this._id}}">
       <img class="image" src="{{this.image}}" alt="{{this.title}}">
     </a>
   </div>
@@ -31,10 +29,9 @@
     <h2>Landscape</h2>
   </a>
   <br>
-  {{#each photoslandscape}}
+  {{#each photosLandscape}}
   <div class="photo-block">
-    <article class="c-card" data-pid="{{this._id}}" data-name="{{this.name}}"></article>
-    <a href="/onePhoto/:id">
+    <a href="/onePhoto/{{this._id}}">
       <img class="image" src="{{this.image}}" alt="{{this.title}}">
     </a>
   </div>
@@ -45,10 +42,9 @@
     <h2>Street Life</h2>
   </a>
   <br>
-  {{#each photosstreetlife}}
+  {{#each photosStreetLife}}
   <div class="photo-block">
-    <article class="c-card" data-pid="{{this._id}}" data-name="{{this.name}}"></article>
-    <a href="/onePhoto/:id">
+    <a href="/onePhoto/{{this._id}}">
       <img class="image" src="{{this.image}}" alt="{{this.title}}">
     </a>
   </div>
@@ -59,12 +55,12 @@
     <h2>Macro</h2>
   </a>
   <br>
-  {{#each photosmacro}}
+  {{#each photosMacro}}
   <div class="photo-block">
-    <article class="c-card" data-pid="{{this._id}}" data-name="{{this.name}}"></article>
-    <a href="/onePhoto/:id">
+    <a href="/onePhoto/{{this._id}}">
       <img class="image" src="{{this.image}}" alt="{{this.title}}">
     </a>
   </div>
   {{/each}}
+  <br>
 </section>
