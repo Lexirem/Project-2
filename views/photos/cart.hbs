@@ -9,7 +9,7 @@
 <h3>This is your cart</h3>
 
 <h1>{{this.item.title}}</h1>
-<form id="shopping-cart" action="/add-to-cart" method="GET">
+<form id="shopping-cart" action="/cart" method="GET">
 
     <table class="shopping-cart">
         <thead>
@@ -20,9 +20,9 @@
             </tr>
         </thead>
         <tbody>
-            <tr>{{#each cart}}
-                <th>{{cart.image}}</th>
-                <th>{{cart.item.qty}}</th>
+            <tr>{{#each userPhotos}}
+                <th><img class="image" src={{this.image}}></th>
+                <th>qty</th>
                 <th>{{this.price}}</th>
             {{/each}}</tr>
         </tbody>
