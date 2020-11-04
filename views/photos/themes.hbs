@@ -1,76 +1,67 @@
 <section>
-  
-  <a href="/oneTheme/" class='#'>
+
+  <a href="/oneTheme/blackandwhite" class='#'>
     <h2>Black and White</h2>
   </a>
   <br>
-  {{#each photos}}
+  {{#each photosblackandwhite}}
   <div class="photo-block">
-    <a href="/onePhoto/{{this._id}}">
-      <img class="image" src="{{this.image}}" alt="{{this.title}}">
-    </a>
-    <a href="/onePhoto/{{this._id}}">
-      <img class="image" src="{{this.image}}" alt="{{this.title}}">
-    </a>
     <a href="/onePhoto/{{this._id}}">
       <img class="image" src="{{this.image}}" alt="{{this.title}}">
     </a>
   </div>
   {{/each}}
-<br>
+  <br>
 
-  <a href="/oneTheme" class='#'>
+  <a href="/oneTheme/urban" class='#'>
     <h2>Urban</h2>
   </a>
   <br>
-  {{#each photos}}
+  {{#each photosUrban}}
   <div class="photo-block">
-    <article class="c-card" data-pid="{{this._id}}" data-name="{{this.name}}"></article>
-    <a href="/onePhoto/:id">
-      <img class="lozad tile-image" src="{{this.image}}" alt="{{this.title}}">
+    <a href="/onePhoto/{{this._id}}">
+      <img class="image" src="{{this.image}}" alt="{{this.title}}">
     </a>
   </div>
   {{/each}}
   <br>
 
-  <a href="/oneTheme" class='#'>
+  <a href="/oneTheme/landscape" class='#'>
     <h2>Landscape</h2>
   </a>
   <br>
-  {{#each photos}}
+  {{#each photosLandscape}}
   <div class="photo-block">
-    <article class="c-card" data-pid="{{this._id}}" data-name="{{this.name}}"></article>
-    <a href="/onePhoto/:id">
-      <img class="lozad tile-image" src="{{this.image}}" alt="{{this.title}}">
+    <a href="/onePhoto/{{this._id}}">
+      <img class="image" src="{{this.image}}" alt="{{this.title}}">
     </a>
   </div>
   {{/each}}
   <br>
 
-  <a href="/oneTheme" class='#'>
+  <a href="/oneTheme/street-life" class='#'>
     <h2>Street Life</h2>
   </a>
   <br>
-  {{#each photos}}
+  {{#each photosStreetLife}}
   <div class="photo-block">
-    <article class="c-card" data-pid="{{this._id}}" data-name="{{this.name}}"></article>
-    <a href="/onePhoto/:id">
-      <img class="lozad tile-image" src="{{this.image}}" alt="{{this.title}}">
+    <a href="/onePhoto/{{this._id}}">
+      <img class="image" src="{{this.image}}" alt="{{this.title}}">
     </a>
   </div>
   {{/each}}
   <br>
 
-  <a href="/oneTheme" class='#'>
+  <a href="/oneTheme/macro" class='#'>
     <h2>Macro</h2>
   </a>
   <br>
-  {{#each photos}}
+  {{#each photosMacro}}
   <div class="photo-block">
-    <article class="c-card" data-pid="{{this._id}}" data-name="{{this.name}}"></article>
-    <a href="/onePhoto/:id">
-      <img class="lozad tile-image" src="{{this.image}}" alt="{{this.title}}">
+    <a href="/onePhoto/{{this._id}}">
+      <img class="image" src="{{this.image}}" alt="{{this.title}}">
     </a>
   </div>
   {{/each}}
+  <br>
 </section>
