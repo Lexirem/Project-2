@@ -56,14 +56,17 @@ ul li:hover{
   margin-top: 15px;    /* if you want it vertically middle of the navbar. */ 
 }
 
+/*fotos en todas las carpetas*/
 .image{
 display: flex;
-width: 30%;
+width: 40%;
 height: auto;
 margin: 5px;
 }
 
-.addToCart {
+
+/*button*/
+.addToCart, .btn{
 
 }
 
@@ -100,15 +103,21 @@ margin: 5px;
   margin-top: 15px;    /* if you want it vertically middle of the navbar. */ 
 }
 
+/*fotos en todas las carpetas*/
 .image{
 display: flex;
-width: 30%;
+width: 40%;
 height: auto;
 margin: 5px;
 }
 
+/*button*/
 .addToCart {
 
+}
+
+.btn {
+  
 }
 
 }
@@ -144,17 +153,23 @@ margin: 5px;
   margin-right: 15px;
   margin-top: 15px;    /* if you want it vertically middle of the navbar. */ 
 }
-
+/*fotos en todas las carpetas*/
 .image{
 display: flex;
-width: 30%;
+width: 40%;
 height: auto;
 margin: 5px;
 }
 
+/*button*/
 .addToCart {
 
 }
+
+.btn {
+  
+}
+
 }
 
 
