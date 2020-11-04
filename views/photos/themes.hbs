@@ -3,13 +3,17 @@
     <h2>Black and White</h2>
   </a>
   <br>
-  {{#each Theme}}
-  <div class="#">
-    <a href="/onePhoto/:id">
-      <img class="#" src={{photos.image}} alt="{{this.title}}">
+  <div class="photo-block">
+    <a href="/onePhoto/{{_id}}">
+      <img class="image" src="/images/fotos-Database/B&W/b&w_belgium2.jpg" alt="Cycling with the dog">
+    </a>
+    <a href="/onePhoto/{{_id}}">
+      <img class="image" src="/images/fotos-Database/B&W/b&w_berlin2.jpg" alt="">
+    </a>
+    <a href="/onePhoto/{{_id}}">
+      <img class="image" src="/images/fotos-Database/B&W/b&w_dublin1.jpg" alt="">
     </a>
   </div>
-  {{/each}}
 <br>
 
   <a href="/oneTheme" class='#'>
