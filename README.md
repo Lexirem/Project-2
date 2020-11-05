@@ -1,5 +1,6 @@
-<img src=“/public/images/logo SM-Photography.png”>
-# S.M Photography
+<img src="/public/images/logo SM-Photography.png">
+# S.M Photograpy
+
 ## Description
 Our APP is an e-commerce application aimed at people passionate about photography.
 S.M Photography was developed using Back-end dev(Node.js) as part of the [Ironhack](https://www.ironhack.com/) developer bootcamp (WebDev-FT-0920) using a local Data Base.
@@ -14,7 +15,8 @@ S.M Photography was developed using Back-end dev(Node.js) as part of the [Ironha
 - **one photo** - As a user I want to see the all the information about that 
 - **user profile** - As a user I want to see my Orders, returns and favourites pictures and be able to modify my account
 - **cart** - As a user I want to be able to see the photos I am about to buy, modify the buying list and go to the payment page so I can confirm my purchase
-## Backlog   
+
+## Backlog    
 - Partnership with a lab printer.
 - Be able to buy the photos you selected.
 - Mark as Favourites the photos you like the most and save them in your User profile.
@@ -41,36 +43,43 @@ S.M Photography was developed using Back-end dev(Node.js) as part of the [Ironha
   - email
   - password
 - POST /auth/logout
- - body: (empty)
+  - body: (empty)
+
 - GET /themes
- - renders the themes list + gives two random photos for each theme
+  - renders the themes list + gives two random photos for each theme
 - GET /oneTheme/nameOfTheTheme
- - renders the list of photos of that theme
+  - renders the list of photos of that theme
 - GET /onePhoto/:id
- - renders the information of the photo you selected
+  - renders the information of the photo you selected
+
 - GET /user 
- - renders to the user profile
+  - renders to the user profile
 - GET /userAccount
- - renders to the user information in case they need to modify any parameter or include an address
+  - renders to the user information in case they need to modify any parameter or include an address
 - POST /userAccount
- - redirects to /userAccount so the user can check the information they modified
- - body:
-  - name
-  - email
-  - address
+  - redirects to /userAccount so the user can check the information they modified
+  - body:
+    - name
+    - email
+    - address
+
 - GET /cart
- - renders to the cart page 
+  - renders to the cart page 
 - POST /add-to-cart/:id
- - redirects to /cart
- - get the photo ID so it recognise which one you want to buy 
+  - redirects to /cart
+  - get the photo ID so it recognise which one you want to buy 
 - POST /delete/:id
- - redirects to /cart
- - deletes the photo by their ID from the cart list
+  - redirects to /cart
+  - deletes the photo by their ID from the cart list
+
 - GET /payments
- - renders to payment page so you can purchase the photos you want
+  - renders to payment page so you can purchase the photos you want
 - POST /payments
- - redirects to /message when you succeed in your purchase
- - you need to introduce your personal information where you want your purchase to be send to and your payment method  
+  - redirects to /message when you succeed in your purchase
+  - you need to introduce your personal information where you want your purchase to be send to and your payment method  
+
+
+
 ## Models
 User model
 ```
@@ -80,7 +89,9 @@ password: String
 address: String
 cart: [ObjectId<Photo>]
 ```
+
 Photo model
+
 ```
 title: String
 image: String
@@ -96,6 +107,8 @@ favorite: Boolean
 URls for the project repo and deploy
 [Link Repo](https://github.com/Lexirem/Project-2)
 [Link Deploy](https://git.heroku.com/sm-photograpy.git)
+
+
 ### Slides
 URls for the project presentation (slides)
 [Link Slides.com](https://docs.google.com/presentation/d/1NgPJ4H9Rm7cU69o5gxnY8g5n3M_fCEKa1LAlYhyVp6U/edit?usp=sharing)
