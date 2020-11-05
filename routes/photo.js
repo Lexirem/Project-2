@@ -55,7 +55,7 @@ router.get('/oneTheme/landscape', withAuth, async (req, res, next) => {
     res.render('photos/oneTheme', {photos});
 });
 router.get('/oneTheme/street-life', withAuth, async (req, res, next) => {
-    const photos = await Photo.find({theme: "Street Life"})
+    const photos = await Photo.find({theme: "Street-Life"})
     res.render('photos/oneTheme', {photos});
 });
 router.get('/oneTheme/macro', withAuth, async (req, res, next) => {

@@ -1,66 +1,365 @@
-<section>
-  <a href="/oneTheme/blackandwhite" class='#'>
-    <h2>Black and White</h2>
-  </a>
-  <br>
-  {{#each photosblackandwhite}}
-  <div class="photo-block">
-    <a href="/onePhoto/{{this._id}}">
-      <img class="image" src="{{this.image}}" alt="{{this.title}}">
-    </a>
-  </div>
-  {{/each}}
-  <br>
+<div class="grid">
+  <section class="copy">
+    <h1>Photo Themes</h1>
+  </section>
 
-  <a href="/oneTheme/urban" class='#'>
-    <h2>Urban</h2>
-  </a>
-  <br>
-  {{#each photosUrban}}
-  <div class="photo-block">
-    <a href="/onePhoto/{{this._id}}">
-      <img class="image" src="{{this.image}}" alt="{{this.title}}">
-    </a>
-  </div>
-  {{/each}}
-  <br>
+    <section class="tiles__container tiles__container--grid">
+      <figure class="tiles__tile tiles__tile--link"><a href="/oneTheme/blackandwhite">
+          <div class="tiles__tile__image">
+            <div class=" gatsby-image-wrapper" style="position:relative;overflow:hidden">
+              <div aria-hidden="true" style="width:100%;padding-bottom:66.8%"></div><img aria-hidden="true"
+                src="images/fotos-Database/B&W/b&w_pisa2.jpg" alt=""
+                style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; object-fit: cover; object-position: center center; opacity: 0; transition-delay: 500ms;">
+              <picture>
+                <source srcset="
+                                images/fotos-Database/B&W/b&w_pisa2.jpg 250w,
+                                images/fotos-Database/B&W/b&w_pisa2.jpg 500w,
+                                images/fotos-Database/B&W/b&w_pisa2.jpg 1000w,
+                                images/fotos-Database/B&W/b&w_pisa2.jpg 1500w,
+                                images/fotos-Database/B&W/b&w_pisa2.jpg 2000w,
+                                images/fotos-Database/B&W/b&w_pisa2.jpg 5760w"
+                  sizes="(max-width: 1000px) 100vw, 1000px"><img sizes="(max-width: 1000px) 100vw, 1000px" srcset=
+    "/static/5eb91b6f48909d5a60d3e9fb17e51c5d/b5282/7f3d43122155dff4f612887d9a6c8c8f.jpg 250w,
+    /static/5eb91b6f48909d5a60d3e9fb17e51c5d/0a9c8/7f3d43122155dff4f612887d9a6c8c8f.jpg 500w,
+    /static/5eb91b6f48909d5a60d3e9fb17e51c5d/d91f7/7f3d43122155dff4f612887d9a6c8c8f.jpg 1000w,
+    /static/5eb91b6f48909d5a60d3e9fb17e51c5d/08276/7f3d43122155dff4f612887d9a6c8c8f.jpg 1500w,
+    /static/5eb91b6f48909d5a60d3e9fb17e51c5d/4e5f3/7f3d43122155dff4f612887d9a6c8c8f.jpg 2000w,
+    /static/5eb91b6f48909d5a60d3e9fb17e51c5d/f477f/7f3d43122155dff4f612887d9a6c8c8f.jpg 5760w"
+                  src="images/fotos-Database/B&W/b&w_pisa2.jpg" alt=""
+                  loading="lazy"
+                  style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; object-fit: cover; object-position: center center; opacity: 1; transition: opacity 500ms ease 0s;">
+              </picture><noscript>
+                <picture>
+                  <source srcset="
+    /static/5eb91b6f48909d5a60d3e9fb17e51c5d/b5282/7f3d43122155dff4f612887d9a6c8c8f.jpg 250w,
+    /static/5eb91b6f48909d5a60d3e9fb17e51c5d/0a9c8/7f3d43122155dff4f612887d9a6c8c8f.jpg 500w,
+    /static/5eb91b6f48909d5a60d3e9fb17e51c5d/d91f7/7f3d43122155dff4f612887d9a6c8c8f.jpg 1000w,
+    /static/5eb91b6f48909d5a60d3e9fb17e51c5d/08276/7f3d43122155dff4f612887d9a6c8c8f.jpg 1500w,
+    /static/5eb91b6f48909d5a60d3e9fb17e51c5d/4e5f3/7f3d43122155dff4f612887d9a6c8c8f.jpg 2000w,
+    /static/5eb91b6f48909d5a60d3e9fb17e51c5d/f477f/7f3d43122155dff4f612887d9a6c8c8f.jpg 5760w"
+                    sizes="(max-width: 1000px) 100vw, 1000px" /><img loading="lazy"
+                    sizes="(max-width: 1000px) 100vw, 1000px" srcset="
+                                        images/fotos-Database/B&W/b&w_pisa2.jpg 250w,
+                                        images/fotos-Database/B&W/b&w_pisa2.jpg 500w,
+                                        images/fotos-Database/B&W/b&w_pisa2.jpg 1000w,
+                                        images/fotos-Database/B&W/b&w_pisa2.jpg 1500w,
+                                        images/fotos-Database/B&W/b&w_pisa2.jpg 2000w,
+                                        images/fotos-Database/B&W/b&w_pisa2.jpg 5760w"
+                    src="images/fotos-Database/B&W/b&w_pisa2.jpg" alt=""
+                    style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center" />
+                </picture>
+              </noscript>
+            </div>
+          </div>
+          <div class="tiles__tile__copy">
+            <h1>Black & White</h1>
+          </div>
+        </a></figure>
 
-  <a href="/oneTheme/landscape" class='#'>
-    <h2>Landscape</h2>
-  </a>
-  <br>
-  {{#each photosLandscape}}
-  <div class="photo-block">
-    <a href="/onePhoto/{{this._id}}">
-      <img class="image" src="{{this.image}}" alt="{{this.title}}">
-    </a>
-  </div>
-  {{/each}}
-  <br>
+      <figure class="tiles__tile tiles__tile--link"><a href="/oneTheme/street-life">
+          <div class="tiles__tile__image">
+            <div class=" gatsby-image-wrapper" style="position:relative;overflow:hidden">
+              <div aria-hidden="true" style="width:100%;padding-bottom:66.8%"></div><img aria-hidden="true"
+                src="images/fotos-Database/UrbanStreetlife/street_budapest1.jpg" alt=""
+                style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; object-fit: cover; object-position: center center; opacity: 0; transition-delay: 500ms;">
+              <picture>
+                <source srcset="images/fotos-Database/UrbanStreetlife/street_budapest1.jpg 250w,
+    images/fotos-Database/UrbanStreetlife/street_budapest1.jpg 500w,
+    images/fotos-Database/UrbanStreetlife/street_budapest1.jpg 1000w,
+    images/fotos-Database/UrbanStreetlife/street_budapest1.jpg 1500w,
+    images/fotos-Database/UrbanStreetlife/street_budapest1.jpg 2000w,
+    images/fotos-Database/UrbanStreetlife/street_budapest1.jpg 5760w" sizes="(max-width: 1000px) 100vw, 1000px"><img
+                  sizes="(max-width: 1000px) 100vw, 1000px" srcset="/static/c598379e28d17d815ae88c591d0b685c/b5282/5accacf5ad3b4405040e0173f72e7cc6.jpg 250w,
+    /static/c598379e28d17d815ae88c591d0b685c/0a9c8/5accacf5ad3b4405040e0173f72e7cc6.jpg 500w,
+    /static/c598379e28d17d815ae88c591d0b685c/d91f7/5accacf5ad3b4405040e0173f72e7cc6.jpg 1000w,
+    /static/c598379e28d17d815ae88c591d0b685c/08276/5accacf5ad3b4405040e0173f72e7cc6.jpg 1500w,
+    /static/c598379e28d17d815ae88c591d0b685c/4e5f3/5accacf5ad3b4405040e0173f72e7cc6.jpg 2000w,
+    /static/c598379e28d17d815ae88c591d0b685c/f477f/5accacf5ad3b4405040e0173f72e7cc6.jpg 5760w"
+                  src="images/fotos-Database/UrbanStreetlife/street_budapest1.jpg" alt="" loading="lazy"
+                  style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; object-fit: cover; object-position: center center; opacity: 1; transition: opacity 500ms ease 0s;">
+              </picture><noscript>
+                <picture>
+                  <source srcset="/static/c598379e28d17d815ae88c591d0b685c/b5282/5accacf5ad3b4405040e0173f72e7cc6.jpg 250w,
+    /static/c598379e28d17d815ae88c591d0b685c/0a9c8/5accacf5ad3b4405040e0173f72e7cc6.jpg 500w,
+    /static/c598379e28d17d815ae88c591d0b685c/d91f7/5accacf5ad3b4405040e0173f72e7cc6.jpg 1000w,
+    /static/c598379e28d17d815ae88c591d0b685c/08276/5accacf5ad3b4405040e0173f72e7cc6.jpg 1500w,
+    /static/c598379e28d17d815ae88c591d0b685c/4e5f3/5accacf5ad3b4405040e0173f72e7cc6.jpg 2000w,
+    /static/c598379e28d17d815ae88c591d0b685c/f477f/5accacf5ad3b4405040e0173f72e7cc6.jpg 5760w"
+                    sizes="(max-width: 1000px) 100vw, 1000px" /><img loading="lazy"
+                    sizes="(max-width: 1000px) 100vw, 1000px" srcset="/static/c598379e28d17d815ae88c591d0b685c/b5282/5accacf5ad3b4405040e0173f72e7cc6.jpg 250w,
+    /static/c598379e28d17d815ae88c591d0b685c/0a9c8/5accacf5ad3b4405040e0173f72e7cc6.jpg 500w,
+    /static/c598379e28d17d815ae88c591d0b685c/d91f7/5accacf5ad3b4405040e0173f72e7cc6.jpg 1000w,
+    /static/c598379e28d17d815ae88c591d0b685c/08276/5accacf5ad3b4405040e0173f72e7cc6.jpg 1500w,
+    /static/c598379e28d17d815ae88c591d0b685c/4e5f3/5accacf5ad3b4405040e0173f72e7cc6.jpg 2000w,
+    /static/c598379e28d17d815ae88c591d0b685c/f477f/5accacf5ad3b4405040e0173f72e7cc6.jpg 5760w"
+                    src="images/fotos-Database/UrbanStreetlife/street_budapest1.jpg" alt=""
+                    style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center" />
+                </picture>
+              </noscript>
+            </div>
+          </div>
+          <div class="tiles__tile__copy">
+            <h1>Street Life</h1>
+          </div>
+        </a></figure>
 
-  <a href="/oneTheme/street-life" class='#'>
-    <h2>Street Life</h2>
-  </a>
-  <br>
-  {{#each photosStreetLife}}
-  <div class="photo-block">
-    <a href="/onePhoto/{{this._id}}">
-      <img class="image" src="{{this.image}}" alt="{{this.title}}">
-    </a>
-  </div>
-  {{/each}}
-  <br>
+      <figure class="tiles__tile tiles__tile--link"><a href="/oneTheme/landscape">
+          <div class="tiles__tile__image">
+            <div class=" gatsby-image-wrapper" style="position:relative;overflow:hidden">
+              <div aria-hidden="true" style="width:100%;padding-bottom:66.8%"></div><img aria-hidden="true"
+                src="images/fotos-Database/Landscape/lands_howth3.jpg" alt=""
+                style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; object-fit: cover; object-position: center center; opacity: 0; transition-delay: 500ms;">
+              <picture>
+                <source srcset="/static/fc5768837ffca6f4fd9bf63e48c99664/b5282/1994e906474119586823c67015478cfe.jpg 250w,
+                                images/fotos-Database/Landscape/lands_howth3.jpg500w,
+                                images/fotos-Database/Landscape/lands_howth3.jpg 1000w,
+                                images/fotos-Database/Landscape/lands_howth3.jpg 1500w,
+                                images/fotos-Database/Landscape/lands_howth3.jpg 2000w,
+                                images/fotos-Database/Landscape/lands_howth3.jpg 3888w"
+                  sizes="(max-width: 1000px) 100vw, 1000px"><img sizes="(max-width: 1000px) 100vw, 1000px" srcset="/static/fc5768837ffca6f4fd9bf63e48c99664/b5282/1994e906474119586823c67015478cfe.jpg 250w,
+    /static/fc5768837ffca6f4fd9bf63e48c99664/0a9c8/1994e906474119586823c67015478cfe.jpg 500w,
+    /static/fc5768837ffca6f4fd9bf63e48c99664/d91f7/1994e906474119586823c67015478cfe.jpg 1000w,
+    /static/fc5768837ffca6f4fd9bf63e48c99664/08276/1994e906474119586823c67015478cfe.jpg 1500w,
+    /static/fc5768837ffca6f4fd9bf63e48c99664/4e5f3/1994e906474119586823c67015478cfe.jpg 2000w,
+    /static/fc5768837ffca6f4fd9bf63e48c99664/c58a5/1994e906474119586823c67015478cfe.jpg 3888w"
+                  src="images/fotos-Database/Landscape/lands_howth3.jpg" alt="" loading="lazy"
+                  style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; object-fit: cover; object-position: center center; opacity: 1; transition: opacity 500ms ease 0s;">
+              </picture><noscript>
+                <picture>
+                  <source srcset="/static/fc5768837ffca6f4fd9bf63e48c99664/b5282/1994e906474119586823c67015478cfe.jpg 250w,
+    /static/fc5768837ffca6f4fd9bf63e48c99664/0a9c8/1994e906474119586823c67015478cfe.jpg 500w,
+    /static/fc5768837ffca6f4fd9bf63e48c99664/d91f7/1994e906474119586823c67015478cfe.jpg 1000w,
+    /static/fc5768837ffca6f4fd9bf63e48c99664/08276/1994e906474119586823c67015478cfe.jpg 1500w,
+    /static/fc5768837ffca6f4fd9bf63e48c99664/4e5f3/1994e906474119586823c67015478cfe.jpg 2000w,
+    /static/fc5768837ffca6f4fd9bf63e48c99664/c58a5/1994e906474119586823c67015478cfe.jpg 3888w"
+                    sizes="(max-width: 1000px) 100vw, 1000px" /><img loading="lazy"
+                    sizes="(max-width: 1000px) 100vw, 1000px" srcset="/static/fc5768837ffca6f4fd9bf63e48c99664/b5282/1994e906474119586823c67015478cfe.jpg 250w,
+    /static/fc5768837ffca6f4fd9bf63e48c99664/0a9c8/1994e906474119586823c67015478cfe.jpg 500w,
+    /static/fc5768837ffca6f4fd9bf63e48c99664/d91f7/1994e906474119586823c67015478cfe.jpg 1000w,
+    /static/fc5768837ffca6f4fd9bf63e48c99664/08276/1994e906474119586823c67015478cfe.jpg 1500w,
+    /static/fc5768837ffca6f4fd9bf63e48c99664/4e5f3/1994e906474119586823c67015478cfe.jpg 2000w,
+    /static/fc5768837ffca6f4fd9bf63e48c99664/c58a5/1994e906474119586823c67015478cfe.jpg 3888w"
+                    src="images/fotos-Database/Landscape/lands_howth3.jpg" alt=""
+                    style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center" />
+                </picture>
+              </noscript>
+            </div>
+          </div>
+          <div class="tiles__tile__copy">
+            <h1>Landscape</h1>
+          </div>
+        </a></figure>
 
-  <a href="/oneTheme/macro" class='#'>
-    <h2>Macro</h2>
-  </a>
-  <br>
-  {{#each photosMacro}}
-  <div class="photo-block">
-    <a href="/onePhoto/{{this._id}}">
-      <img class="image" src="{{this.image}}" alt="{{this.title}}">
-    </a>
-  </div>
-  {{/each}}
-  <br>
+      <figure class="tiles__tile tiles__tile--link"><a href="/oneTheme/urban">
+          <div class="tiles__tile__image">
+            <div class=" gatsby-image-wrapper" style="position:relative;overflow:hidden">
+              <div aria-hidden="true" style="width:100%;padding-bottom:66.8%"></div><img aria-hidden="true"
+                src="images/fotos-Database/City-Buildings-Monuments/cbm_edimburgh-St-Giles_Cathedral.jpg" alt=""
+                style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; object-fit: cover; object-position: center center; opacity: 0; transition-delay: 500ms;">
+              <picture>
+                <source
+                  srcset="/static/1484c80a44130ec8d332de9771bf9603/b5282/0dd20afa05a69236180dbbbba3d65ffb.jpg 250w,
+                                images/fotos-Database/City-Buildings-Monuments/cbm_edimburgh-St-Giles_Cathedral.jpg 500w,
+                                images/fotos-Database/City-Buildings-Monuments/cbm_edimburgh-St-Giles_Cathedral.jpg 1000w,
+                                images/fotos-Database/City-Buildings-Monuments/cbm_edimburgh-St-Giles_Cathedral.jpg 1500w,
+                                images/fotos-Database/City-Buildings-Monuments/cbm_edimburgh-St-Giles_Cathedral.jpg 2000w,
+                                images/fotos-Database/City-Buildings-Monuments/cbm_edimburgh-St-Giles_Cathedral.jpg 5760w"
+                  sizes="(max-width: 1000px) 100vw, 1000px"><img sizes="(max-width: 1000px) 100vw, 1000px" srcset="/static/1484c80a44130ec8d332de9771bf9603/b5282/0dd20afa05a69236180dbbbba3d65ffb.jpg 250w,
+    /static/1484c80a44130ec8d332de9771bf9603/0a9c8/0dd20afa05a69236180dbbbba3d65ffb.jpg 500w,
+    /static/1484c80a44130ec8d332de9771bf9603/d91f7/0dd20afa05a69236180dbbbba3d65ffb.jpg 1000w,
+    /static/1484c80a44130ec8d332de9771bf9603/08276/0dd20afa05a69236180dbbbba3d65ffb.jpg 1500w,
+    /static/1484c80a44130ec8d332de9771bf9603/4e5f3/0dd20afa05a69236180dbbbba3d65ffb.jpg 2000w,
+    /static/1484c80a44130ec8d332de9771bf9603/f477f/0dd20afa05a69236180dbbbba3d65ffb.jpg 5760w"
+                  src="images/fotos-Database/City-Buildings-Monuments/cbm_edimburgh-St-Giles_Cathedral.jpg" alt=""
+                  loading="lazy"
+                  style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; object-fit: cover; object-position: center center; opacity: 1; transition: opacity 500ms ease 0s;">
+              </picture><noscript>
+                <picture>
+                  <source srcset="/static/1484c80a44130ec8d332de9771bf9603/b5282/0dd20afa05a69236180dbbbba3d65ffb.jpg 250w,
+    /static/1484c80a44130ec8d332de9771bf9603/0a9c8/0dd20afa05a69236180dbbbba3d65ffb.jpg 500w,
+    /static/1484c80a44130ec8d332de9771bf9603/d91f7/0dd20afa05a69236180dbbbba3d65ffb.jpg 1000w,
+    /static/1484c80a44130ec8d332de9771bf9603/08276/0dd20afa05a69236180dbbbba3d65ffb.jpg 1500w,
+    /static/1484c80a44130ec8d332de9771bf9603/4e5f3/0dd20afa05a69236180dbbbba3d65ffb.jpg 2000w,
+    /static/1484c80a44130ec8d332de9771bf9603/f477f/0dd20afa05a69236180dbbbba3d65ffb.jpg 5760w"
+                    sizes="(max-width: 1000px) 100vw, 1000px" /><img loading="lazy"
+                    sizes="(max-width: 1000px) 100vw, 1000px" srcset="/static/1484c80a44130ec8d332de9771bf9603/b5282/0dd20afa05a69236180dbbbba3d65ffb.jpg 250w,
+    /static/1484c80a44130ec8d332de9771bf9603/0a9c8/0dd20afa05a69236180dbbbba3d65ffb.jpg 500w,
+    /static/1484c80a44130ec8d332de9771bf9603/d91f7/0dd20afa05a69236180dbbbba3d65ffb.jpg 1000w,
+    /static/1484c80a44130ec8d332de9771bf9603/08276/0dd20afa05a69236180dbbbba3d65ffb.jpg 1500w,
+    /static/1484c80a44130ec8d332de9771bf9603/4e5f3/0dd20afa05a69236180dbbbba3d65ffb.jpg 2000w,
+    /static/1484c80a44130ec8d332de9771bf9603/f477f/0dd20afa05a69236180dbbbba3d65ffb.jpg 5760w"
+                    src="images/fotos-Database/City-Buildings-Monuments/cbm_edimburgh-St-Giles_Cathedral.jpg" alt=""
+                    style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center" />
+                </picture>
+              </noscript>
+            </div>
+          </div>
+          <div class="tiles__tile__copy">
+            <h1>Urban</h1>
+          </div>
+        </a></figure>
+
+      <figure class="tiles__tile tiles__tile--link"><a href="/oneTheme/macro">
+          <div class="tiles__tile__image">
+            <div class=" gatsby-image-wrapper" style="position:relative;overflow:hidden">
+              <div aria-hidden="true" style="width:100%;padding-bottom:66.8%"></div><img aria-hidden="true"
+                src="images/fotos-Database/macro/macro_flower1.jpg" alt=""
+                style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition-delay:500ms">
+              <picture>
+                <source srcset="images/fotos-Database/macro/macro_flower1.jpg 250w,
+    images/fotos-Database/macro/macro_flower1.jpg 500w,
+    images/fotos-Database/macro/macro_flower1.jpg 1000w,
+    images/fotos-Database/macro/macro_flower1.jpg 1500w,
+    images/fotos-Database/macro/macro_flower1.jpg 2000w,
+    images/fotos-Database/macro/macro_flower1.jpg 5760w" sizes="(max-width: 1000px) 100vw, 1000px"><img
+                  sizes="(max-width: 1000px) 100vw, 1000px" srcset="/static/7adbb2fe07edfb57a9f3cdbeea15dcff/b5282/3f1794c996eb53e94e1c2e10c7f662aa.jpg 250w,
+    /static/7adbb2fe07edfb57a9f3cdbeea15dcff/0a9c8/3f1794c996eb53e94e1c2e10c7f662aa.jpg 500w,
+    /static/7adbb2fe07edfb57a9f3cdbeea15dcff/d91f7/3f1794c996eb53e94e1c2e10c7f662aa.jpg 1000w,
+    /static/7adbb2fe07edfb57a9f3cdbeea15dcff/08276/3f1794c996eb53e94e1c2e10c7f662aa.jpg 1500w,
+    /static/7adbb2fe07edfb57a9f3cdbeea15dcff/4e5f3/3f1794c996eb53e94e1c2e10c7f662aa.jpg 2000w,
+    /static/7adbb2fe07edfb57a9f3cdbeea15dcff/f477f/3f1794c996eb53e94e1c2e10c7f662aa.jpg 5760w"
+                  src="images/fotos-Database/macro/macro_flower1.jpg" alt="" loading="lazy"
+                  style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; object-fit: cover; object-position: center center; opacity: 0; transition: opacity 500ms ease 0s;">
+              </picture><noscript>
+                <picture>
+                  <source srcset="/static/7adbb2fe07edfb57a9f3cdbeea15dcff/b5282/3f1794c996eb53e94e1c2e10c7f662aa.jpg 250w,
+    /static/7adbb2fe07edfb57a9f3cdbeea15dcff/0a9c8/3f1794c996eb53e94e1c2e10c7f662aa.jpg 500w,
+    /static/7adbb2fe07edfb57a9f3cdbeea15dcff/d91f7/3f1794c996eb53e94e1c2e10c7f662aa.jpg 1000w,
+    /static/7adbb2fe07edfb57a9f3cdbeea15dcff/08276/3f1794c996eb53e94e1c2e10c7f662aa.jpg 1500w,
+    /static/7adbb2fe07edfb57a9f3cdbeea15dcff/4e5f3/3f1794c996eb53e94e1c2e10c7f662aa.jpg 2000w,
+    /static/7adbb2fe07edfb57a9f3cdbeea15dcff/f477f/3f1794c996eb53e94e1c2e10c7f662aa.jpg 5760w"
+                    sizes="(max-width: 1000px) 100vw, 1000px" /><img loading="lazy"
+                    sizes="(max-width: 1000px) 100vw, 1000px" srcset="/static/7adbb2fe07edfb57a9f3cdbeea15dcff/b5282/3f1794c996eb53e94e1c2e10c7f662aa.jpg 250w,
+    /static/7adbb2fe07edfb57a9f3cdbeea15dcff/0a9c8/3f1794c996eb53e94e1c2e10c7f662aa.jpg 500w,
+    /static/7adbb2fe07edfb57a9f3cdbeea15dcff/d91f7/3f1794c996eb53e94e1c2e10c7f662aa.jpg 1000w,
+    /static/7adbb2fe07edfb57a9f3cdbeea15dcff/08276/3f1794c996eb53e94e1c2e10c7f662aa.jpg 1500w,
+    /static/7adbb2fe07edfb57a9f3cdbeea15dcff/4e5f3/3f1794c996eb53e94e1c2e10c7f662aa.jpg 2000w,
+    /static/7adbb2fe07edfb57a9f3cdbeea15dcff/f477f/3f1794c996eb53e94e1c2e10c7f662aa.jpg 5760w"
+                    src="images/fotos-Database/macro/macro_flower1.jpg" alt=""
+                    style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center" />
+                </picture>
+              </noscript>
+            </div>
+          </div>
+          <div class="tiles__tile__copy">
+            <h1>Macro</h1>
+          </div>
+        </a></figure>
+
+      <figure class="tiles__tile tiles__tile--link"><a href="/oneTheme/portraits">
+          <div class="tiles__tile__image">
+            <div class=" gatsby-image-wrapper" style="position:relative;overflow:hidden">
+              <div aria-hidden="true" style="width:100%;padding-bottom:66.8%"></div><img aria-hidden="true"
+                src="images/fotos-Database/portraits/DSC_4160.jpg" alt=""
+                style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition-delay:500ms">
+              <picture>
+                <source srcset="/static/9c0c400aff382fcc3bfce2a4e127fcd9/b5282/528f8fc9679ac077cf9666c456644f54.jpg 250w,
+                                images/fotos-Database/portraits/DSC_4160.jpg 500w,
+                                images/fotos-Database/portraits/DSC_4160.jpg 1000w,
+                                images/fotos-Database/portraits/DSC_4160.jpg 1500w,
+                                images/fotos-Database/portraits/DSC_4160.jpg 2000w,
+                                images/fotos-Database/portraits/DSC_4160.jpg 6302w"
+                  sizes="(max-width: 1000px) 100vw, 1000px"><img sizes="(max-width: 1000px) 100vw, 1000px" srcset="/static/9c0c400aff382fcc3bfce2a4e127fcd9/b5282/528f8fc9679ac077cf9666c456644f54.jpg 250w,
+    /static/9c0c400aff382fcc3bfce2a4e127fcd9/0a9c8/528f8fc9679ac077cf9666c456644f54.jpg 500w,
+    /static/9c0c400aff382fcc3bfce2a4e127fcd9/d91f7/528f8fc9679ac077cf9666c456644f54.jpg 1000w,
+    /static/9c0c400aff382fcc3bfce2a4e127fcd9/08276/528f8fc9679ac077cf9666c456644f54.jpg 1500w,
+    /static/9c0c400aff382fcc3bfce2a4e127fcd9/4e5f3/528f8fc9679ac077cf9666c456644f54.jpg 2000w,
+    /static/9c0c400aff382fcc3bfce2a4e127fcd9/eba03/528f8fc9679ac077cf9666c456644f54.jpg 6302w"
+                  src="images/fotos-Database/portraits/DSC_4160.jpg" alt="" loading="lazy"
+                  style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; object-fit: cover; object-position: center center; opacity: 0; transition: opacity 500ms ease 0s;">
+              </picture><noscript>
+                <picture>
+                  <source srcset="/static/9c0c400aff382fcc3bfce2a4e127fcd9/b5282/528f8fc9679ac077cf9666c456644f54.jpg 250w,
+    /static/9c0c400aff382fcc3bfce2a4e127fcd9/0a9c8/528f8fc9679ac077cf9666c456644f54.jpg 500w,
+    /static/9c0c400aff382fcc3bfce2a4e127fcd9/d91f7/528f8fc9679ac077cf9666c456644f54.jpg 1000w,
+    /static/9c0c400aff382fcc3bfce2a4e127fcd9/08276/528f8fc9679ac077cf9666c456644f54.jpg 1500w,
+    /static/9c0c400aff382fcc3bfce2a4e127fcd9/4e5f3/528f8fc9679ac077cf9666c456644f54.jpg 2000w,
+    /static/9c0c400aff382fcc3bfce2a4e127fcd9/eba03/528f8fc9679ac077cf9666c456644f54.jpg 6302w"
+                    sizes="(max-width: 1000px) 100vw, 1000px" /><img loading="lazy"
+                    sizes="(max-width: 1000px) 100vw, 1000px" srcset="/static/9c0c400aff382fcc3bfce2a4e127fcd9/b5282/528f8fc9679ac077cf9666c456644f54.jpg 250w,
+    /static/9c0c400aff382fcc3bfce2a4e127fcd9/0a9c8/528f8fc9679ac077cf9666c456644f54.jpg 500w,
+    /static/9c0c400aff382fcc3bfce2a4e127fcd9/d91f7/528f8fc9679ac077cf9666c456644f54.jpg 1000w,
+    /static/9c0c400aff382fcc3bfce2a4e127fcd9/08276/528f8fc9679ac077cf9666c456644f54.jpg 1500w,
+    /static/9c0c400aff382fcc3bfce2a4e127fcd9/4e5f3/528f8fc9679ac077cf9666c456644f54.jpg 2000w,
+    /static/9c0c400aff382fcc3bfce2a4e127fcd9/eba03/528f8fc9679ac077cf9666c456644f54.jpg 6302w"
+                    src="images/fotos-Database/portraits/DSC_4160.jpg" alt=""
+                    style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center" />
+                </picture>
+              </noscript>
+            </div>
+          </div>
+          <div class="tiles__tile__copy">
+            <h1>Portraitss</h1>
+          </div>
+        </a></figure>
+    </section>
+  </section>
 </section>
+
+{{!-- 
+  <section>
+    <a href="/oneTheme/blackandwhite" class='#'>
+      <h2>Black and White</h2>
+    </a>
+    <br>
+    {{#each photosblackandwhite}}
+    <div class="photo-block">
+      <a href="/onePhoto/{{this._id}}">
+        <img class="image" src="{{this.image}}" alt="{{this.title}}">
+      </a>
+    </div>
+    {{/each}}
+    <br>
+
+    <a href="/oneTheme/urban" class='#'>
+      <h2>Urban</h2>
+    </a>
+    <br>
+    {{#each photosUrban}}
+    <div class="photo-block">
+      <a href="/onePhoto/{{this._id}}">
+        <img class="image" src="{{this.image}}" alt="{{this.title}}">
+      </a>
+    </div>
+    {{/each}}
+    <br>
+
+    <a href="/oneTheme/landscape" class='#'>
+      <h2>Landscape</h2>
+    </a>
+    <br>
+    {{#each photosLandscape}}
+    <div class="photo-block">
+      <a href="/onePhoto/{{this._id}}">
+        <img class="image" src="{{this.image}}" alt="{{this.title}}">
+      </a>
+    </div>
+    {{/each}}
+    <br>
+
+    <a href="/oneTheme/street-life" class='#'>
+      <h2>Street Life</h2>
+    </a>
+    <br>
+    {{#each photosStreetLife}}
+    <div class="photo-block">
+      <a href="/onePhoto/{{this._id}}">
+        <img class="image" src="{{this.image}}" alt="{{this.title}}">
+      </a>
+    </div>
+    {{/each}}
+    <br>
+
+    <a href="/oneTheme/macro" class='#'>
+      <h2>Macro</h2>
+    </a>
+    <br>
+    {{#each photosMacro}}
+    <div class="photo-block">
+      <a href="/onePhoto/{{this._id}}">
+        <img class="image" src="{{this.image}}" alt="{{this.title}}">
+      </a>
+    </div>
+    {{/each}}
+    <br>
+  </section> --}}
