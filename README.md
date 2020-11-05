@@ -13,10 +13,10 @@ S.M Photography was developed using Back-end dev(Node.js) as part of the [Ironha
 - **sign up** - As a user I want to sign up on the webpage so that I can see all the events that I could attend
 - **login** - As a user I want to be able to log in on the webpage so that I can get back to my account
 - **logout** - As a user I want to be able to log out from the webpage so that I can make sure no one will access my account
-- **events list** - As a user I want to see all the events available so that I can choose which ones I want to attend
-- **events create** - As a user I want to create an event so that I can invite others to attend
-- **events detail** - As a user I want to see the event details and attendee list of one event so that I can decide if I want to attend 
-- **event attend** - As a user I want to be able to attend to event so that the organizers can count me in
+- **themes and one theme** - As a user I want to see all the themes available so that I can choose from which one I want to see all the pictures available for that theme.
+- **one photo** - As a user I want to see the all the information about that 
+- **user profile** - As a user I want to see my Orders, returns and favourites pictures and be able to modify my account
+- **cart** - As a user I want to be able to see the photos I am about to buy, modify the buying list and go to the payment page so I can confirm my purchase
 
 ## Backlog    
 - Partnership with a lab printer.
@@ -51,22 +51,39 @@ S.M Photography was developed using Back-end dev(Node.js) as part of the [Ironha
 - POST /auth/logout
   - body: (empty)
 
-- GET /events
-  - renders the event list + the create form
-- POST /events/create 
-  - redirects to / if user is anonymous
-  - body: 
+- GET /themes
+  - renders the themes list + gives two random photos for each theme
+- GET /oneTheme/nameOfTheTheme
+  - renders the list of photos of that theme
+- GET /onePhoto/:id
+  - renders the information of the photo you selected
+
+- GET /user 
+  - renders to the user profile
+- GET /userAccount
+  - renders to the user information in case they need to modify any parameter or include an address
+- POST /userAccount
+  - redirects to /userAccount so the user can check the information they modified
+  - body:
     - name
-    - date
-    - location
-    - description
-- GET /events/:id
-  - renders the event detail page
-  - includes the list of attendees
-  - attend button if user not attending yet
-- POST /events/:id/attend 
-  - redirects to / if user is anonymous
-  - body: (empty - the user is already stored in the session)
+    - email
+    - address
+
+- GET /cart
+  - renders to the cart page 
+- POST /add-to-cart/:id
+  - redirects to /cart
+  - get the photo ID so it recognise which one you want to buy 
+- POST /delete/:id
+  - redirects to /cart
+  - deletes the photo by their ID from the cart list
+
+- GET /payments
+  - renders to payment page so you can purchase the photos you want
+- POST /payments
+  - redirects to /message when you succeed in your purchase
+  - you need to introduce your personal information where you want your purchase to be send to and your payment method  
+
 
 
 ## Models
@@ -77,16 +94,19 @@ User model
 username: String
 email: String
 password: String
+address: String
+cart: [ObjectId<Photo>]
 ```
 
-Event model
+Photo model
 
 ```
 title: String
+image: String
 description: String
+theme: String
 price: Number
 favorite: Boolean
-attendees: [ObjectId<User>]
 ```
 
 ## Links
@@ -99,7 +119,7 @@ attendees: [ObjectId<User>]
 ### Github
 URls for the project repo and deploy
 [Link Repo](https://github.com/Lexirem/Project-2)
-[Link Deploy](http://github.com)
+[Link Deploy](https://git.heroku.com/sm-photograpy.git)
 
 
 ### Slides

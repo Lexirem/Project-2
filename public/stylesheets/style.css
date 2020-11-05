@@ -16,7 +16,7 @@ a:hover {
   text-decoration: none;
   color: orange;
   cursor: pointer;
-} */
+} 
 
 /* Navigation Bar */
 
@@ -55,7 +55,7 @@ a:hover {
   height: auto;
   margin: 5px;
 }
-
+/* apartado cart */
 .shopping-cart {
   display: flex;
   flex-direction: row;
@@ -123,10 +123,10 @@ a:hover {
 /* Navbar */
 
 /* .navbar {
-  background-color: black !important;
-}
+  background-color: black ;
+} */
 
-.navbar-toggler {
+/* .navbar-toggler { 
   background-color: #f1a635;
 } */
 
