@@ -1,21 +1,23 @@
-<div>
-    <h1>{{photos.title}}</h1>
-    <img class="image" src="{{photos.image}}" alt="{{photos.title}}">
-    <p>Description: {{photos.description}}</p>
-    <div>
-        <h4>Price</h4>
-        <p>{{photos.price}}</p>
-    </div>
-<<<<<<< HEAD
-    <div>
-        <form action="/add-to-cart/{{photos._id}}" method="POST"><button class="addToCart" type="submit">Add to
-                cart</button>
-        </form>
-    </div>
-=======
-<div>
-<form action="/add-to-cart/{{photos._id}}" method="POST"><button class="addToCart" type="submit">Add to cart</button></form>
- </div>
-
-
->>>>>>> intermedia
+<section class="content" role="main">
+    <header class="home__header">
+        <div class="headline">
+            <div class="headline__container">
+                <div class="headline__copy">
+                    <h1>{{photos.title}}</h1>
+                    <br>
+                    <span>{{photos.description}}</span>
+                </div>
+                <img class="image" src="{{photos.image}}" alt="{{photos.title}}">
+            </div>
+            <div class="headline__copy">
+                <h2>Price</h2>
+                <h2>{{photos.price}}</h2>
+            </div>
+            <div>
+                <form action="/add-to-cart/{{photos._id}}" method="POST">
+                    <button class="addToCart" type="submit">Add to cart</button>
+                </form>
+            </div>
+        </div>
+    </header>
+</section>
