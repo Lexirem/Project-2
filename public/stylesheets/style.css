@@ -16,13 +16,6 @@ a:hover {
   text-decoration: none;
   color: orange;
   cursor: pointer;
-}
-
-/* ul li{
-  display: inline-block; 
-  padding: 10px;
-  font-size: 10px; 
-  font-family: raleway;
 } */
 
 /* Navigation Bar */
@@ -117,7 +110,7 @@ a:hover {
 
 .text-lettuce {
   color: #f1a635;
-}
+} */
 
 /* Black outline for title letters */
 
@@ -129,15 +122,17 @@ a:hover {
 
 /* Navbar */
 
-.navbar-brand {
-  width: 10em;
+/* .navbar {
+  background-color: black !important;
 }
 
-.custom-toggler .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-}
+.navbar-toggler {
+  background-color: #f1a635;
+} */
 
-.burbank text-sm {
+/*  fonte escolhida para as palavras da navbar */
+
+/* .burbank text-sm {
   padding-right: 20px;
 }
 
@@ -165,7 +160,7 @@ a:hover {
   color: #b06b12;
   background-color: black;
 }
-
+*/
 @media (min-width: 750px) {
   /* Navigation Bar */
 
