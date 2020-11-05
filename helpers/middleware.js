@@ -3,7 +3,7 @@
 
 const jwt = require("jsonwebtoken");
 
-const secret = process.env.SECRET_SESSION;
+const secret = process.env.SESSION_SECRET;
 
 const User = require("../models/user");
 

@@ -96,7 +96,7 @@ router.post("/login", async (req, res) => {
         const userWithoutPass = await User.findOne({ email }).select("-password");
         const payload = { userID: userWithoutPass._id };
         // si coincide, creamos el token usando el método sign, el string de secret session y el expiring time
-        const token = jwt.sign(payload, process.env.SECRET_SESSION, {
+        const token = jwt.sign(payload, process.env.SESSION_SECRET, {
           expiresIn: "4h",
         });
         // enviamos en la respuesta una cookie con el token y luego redirigimos a la home
