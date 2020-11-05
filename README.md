@@ -4,9 +4,7 @@
 ## Description
 Our APP is an e-commerce application aimed at people passionate about photography.
 S.M Photography was developed using Back-end dev(Node.js) as part of the [Ironhack](https://www.ironhack.com/) developer bootcamp (WebDev-FT-0920) using a local Data Base.
-
 ## User Stories
-
 - **404** - As a user I want to see a nice 404 page when I go to a page that doesn’t exist so that I know it was my fault 
 - **500** - As a user I want to see a nice error page when the super team screws it up so that I know that is not my fault
 - **homepage** - As a user I want to be able to access the homepage so that I see what the app is about and login and signup
@@ -22,32 +20,28 @@ S.M Photography was developed using Back-end dev(Node.js) as part of the [Ironha
 - Partnership with a lab printer.
 - Be able to buy the photos you selected.
 - Mark as Favourites the photos you like the most and save them in your User profile.
-
-## Wireframes    
-<img src="public/images/wireframe.jpg">
-
-
+## Wireframes   
+<img src=“public/images/wireframe.jpg”>
 ## ROUTES:
-
 - GET / 
-  - renders the homepage
+ - renders the homepage
 - GET /auth/signup
-  - redirects to /login so the user can log in
-  - renders the signup form (with flash msg)
+ - redirects to /login so the user can log in
+ - renders the signup form (with flash msg)
 - POST /auth/signup
-  - redirects to /login so the user can log in
-  - body:
-    - name
-    - email
-    - password
+ - redirects to /login so the user can log in
+ - body:
+  - name
+  - email
+  - password
 - GET /auth/login
-  - redirects to / if user logged in
-  - renders the login form (with flash msg)
+ - redirects to / if user logged in
+ - renders the login form (with flash msg)
 - POST /auth/login
-  - redirects to / if user logged in
-  - body:
-    - email
-    - password
+ - redirects to / if user logged in
+ - body:
+  - email
+  - password
 - POST /auth/logout
   - body: (empty)
 
@@ -87,9 +81,7 @@ S.M Photography was developed using Back-end dev(Node.js) as part of the [Ironha
 
 
 ## Models
-
 User model
- 
 ```
 username: String
 email: String
@@ -108,14 +100,9 @@ theme: String
 price: Number
 favorite: Boolean
 ```
-
 ## Links
-
-
 ### Trello (list of tasks)
 [Link url](https://trello.com/b/QUSSw8w0/projecte-n2-ironhack)
-
-
 ### Github
 URls for the project repo and deploy
 [Link Repo](https://github.com/Lexirem/Project-2)

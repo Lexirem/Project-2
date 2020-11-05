@@ -1,13 +1,25 @@
-<h3>{{photos.0.theme}}</h3> 
+<div class="grid">
+    <section class="copy">
+        <h1>{{photos.0.theme}}</h1>
+    </section>
+</div>
 
 {{#each photos}}
 <h2>{{this.title}}</h2>
-<a class="image" href="/onePhoto/{{_id}}">
-    <img class="image"
-        src="{{this.image}}"
-        alt="{{this.title}}">
-</a>
-<p>Description: {{this.description}}</p>
-<h4>Price: {{this.price}}</h4>
-<form action="/add-to-cart/{{this._id}}" method="POST"><button class="addToCart" type="submit">Add to cart</button></form>
+<section class="gallery">
+    <div class="gallery__container">
+        <figure class="gallery__item">
+            <div class=" gatsby-image-wrapper" style="position: relative; overflow: hidden;">
+                <a class="image" href="/onePhoto/{{_id}}">
+                    <img class="image" src="{{this.image}}" alt="{{this.title}}">
+                </a>
+            </div>
+        </figure>
+        <p>Description: {{this.description}}</p>
+        <h4>Price: {{this.price}}</h4>
+        <form action="/add-to-cart/{{this._id}}" method="POST"><button class="addToCart" type="submit">Add to
+                cart</button>
+        </form>
+    </div>
+</section>
 {{/each}}
