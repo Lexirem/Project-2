@@ -79,7 +79,7 @@ router.post("/login", async (req, res) => {
   const { email, password } = req.body;
   if (email === "" || password === "") {
     res.render("auth/login", {
-      errorMessage: "Please enter both, username and password to sign up.",
+      errorMessage: "Please enter both, email and password to sign up.",
     });
     return;
   }

@@ -37,6 +37,9 @@ router.post("/delete/:id", withAuth, async (req, res, next) => {
   let idPhoto = req.params.id;
   let idUser = req.userID;
   try {
+    let foundUser = await User.findById(idUser);
+    console.log(foundUser.cart.length)
+    if(foundUser.cart.length > 1){
     let user = await User.findByIdAndUpdate(
       idUser,
       { $pull: { cart: idPhoto } },
@@ -44,6 +47,15 @@ router.post("/delete/:id", withAuth, async (req, res, next) => {
     );
     console.log(user);
     res.redirect("/cart");
+    } else {
+    let user = await User.findByIdAndUpdate(
+      idUser,
+      { cart: []},
+      { new: true }
+    );
+    console.log(user);
+    res.redirect('/cart')
+    };
   } catch (err) {
     console.log(err);
     next(err);

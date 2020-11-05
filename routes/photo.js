@@ -103,5 +103,17 @@ router.get('/userAccount', withAuth, (req, res, next) => {
     res.render('photos/userAccount');
 })
 
+router.post('/userAccount', withAuth, async (req, res, next) => {
+    let idUser = req.userID;
+    const {name, email, address} = req.body;
+    try{
+      let updateUser = await User.findByIdAndUpdate(idUser, {name, email, address}, {new:true});  
+      res.redirect('/userAccount');  
+    } catch(err){
+        console.log(err)
+    }
+});
+
+
 
 module.exports = router; 
