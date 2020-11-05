@@ -1,6 +1,6 @@
 require('dotenv').config();
 const mongoose = require('mongoose');
-const session = require('session');
+// const session = require('session');
 const Photo = require('../models/photo');
 
 
