@@ -1,8 +1,13 @@
+require('dotenv').config();
 const mongoose = require('mongoose');
+const session = require('session');
 const Photo = require('../models/photo');
 
-const dbName = 'SM-Photography';
-mongoose.connect(`mongodb://localhost/${dbName}`, { useNewUrlParser: true, useUnifiedTopology: true } );
+
+mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true } );
+
+
+
 Photo.collection.drop();
 
 

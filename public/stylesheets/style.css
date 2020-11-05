@@ -14,7 +14,7 @@ a,
 a:visited,
 a:hover {
   text-decoration: none;
-  color: grey;
+  color: orange;
   cursor: pointer;
 }
 

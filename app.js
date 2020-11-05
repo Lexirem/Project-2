@@ -5,7 +5,8 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
-
+// const session = require('session');
+// const MongoStore = require('connect-mongo')(session);
 
 const favicon = require('serve-favicon');
 const mongoose = require('mongoose');
@@ -13,7 +14,7 @@ const mongoose = require('mongoose');
 const jwt = require("jsonwebtoken");
 
 mongoose
-  .connect('mongodb://localhost/SM-Photography', {
+  .connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
@@ -25,6 +26,7 @@ mongoose
   .catch(err => {
     console.error('Error connecting to mongo', err);
   });
+
 
   //*orden de los routers* authRouter tiene que ir antes de laundryRouter si queremos ver las rutas de laundry correctamente.
 const indexRouter = require('./routes/index');
@@ -38,6 +40,20 @@ const app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
+
+// // SESSION MIDDLEWARE
+// app.use(
+//   session({
+//     secret: process.env.SESSION_SECRET,
+//     resave: true,
+//     saveUninitialized: false,
+//     store: new MongoStore({
+//       mongooseConnection: mongoose.connection,
+//       ttl: 60 * 60 * 24 * 7,
+//     }),
+//   })
+// );
+
 // Middleware Setup
 
 app.use(logger('dev'));
@@ -45,7 +61,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
 
 
 app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));

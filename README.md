@@ -20,6 +20,8 @@ S.M Photography was developed using Back-end dev(Node.js) as part of the [Ironha
 
 ## Backlog    
 - Partnership with a lab printer.
+- Be able to buy the photos you selected.
+- Mark as Favourites the photos you like the most and save them in your User profile.
 
 ## Wireframes    
 <img src="public/images/wireframe.jpg">
@@ -30,12 +32,12 @@ S.M Photography was developed using Back-end dev(Node.js) as part of the [Ironha
 - GET / 
   - renders the homepage
 - GET /auth/signup
-  - redirects to / if user logged in
+  - redirects to /login so the user can log in
   - renders the signup form (with flash msg)
 - POST /auth/signup
-  - redirects to / if user logged in
+  - redirects to /login so the user can log in
   - body:
-    - username
+    - name
     - email
     - password
 - GET /auth/login
@@ -44,7 +46,7 @@ S.M Photography was developed using Back-end dev(Node.js) as part of the [Ironha
 - POST /auth/login
   - redirects to / if user logged in
   - body:
-    - username
+    - email
     - password
 - POST /auth/logout
   - body: (empty)
