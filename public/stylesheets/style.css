@@ -34,11 +34,13 @@ a:hover {
 }
 
 /*button*/
-.addToCart .btn {
+.addToCart {
   text-align: center;
   display: inline-block;
   color: orange;
-
+}
+.btn{
+  color: orange;
 }
 
 /* NEW DESIGN */
@@ -243,10 +245,6 @@ p {
   height: auto;
   margin-right: 1rem
 }
-/* one photo */
-/* .onePhoto p{
-  font-size: 20px;
-} */
 
 .navigation__instagram {
   flex-basis: 2rem;
