@@ -1,4 +1,4 @@
-<img src="/images/logo SM-Photography.png">
+<img src="/public/images/logo SM-Photography.png">
 # S.M Photograpy
 
 ## Description
