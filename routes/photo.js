@@ -38,26 +38,29 @@ router.get('/themes', withAuth, async (req, res, next) => {
     }
 });
 
+
+
+
 //ruta de cada uno de los Themes:
 router.get('/oneTheme/blackandwhite', withAuth, async (req, res, next) => {
-    const photos = await Photo.find({ theme: "Black and white" })
-    res.render('photos/oneTheme', { photos });
+    const photos = await Photo.find({theme: "Black and white"})
+    res.render('photos/oneTheme', {photos});
 });
 router.get('/oneTheme/urban', withAuth, async (req, res, next) => {
-    const photos = await Photo.find({ theme: "Urban" });
-    res.render('photos/oneTheme', { photos });
+    const photos = await Photo.find({theme: "Urban"})
+    res.render('photos/oneTheme', {photos});
 });
 router.get('/oneTheme/landscape', withAuth, async (req, res, next) => {
-    const photos = await Photo.find({ theme: "Landscape" });
-    res.render('photos/oneTheme', { photos });
+    const photos = await Photo.find({theme: "Landscape"})
+    res.render('photos/oneTheme', {photos});
 });
 router.get('/oneTheme/street-life', withAuth, async (req, res, next) => {
-    const photos = await Photo.find({ theme: "Street-Life" });
-    res.render('photos/oneTheme', { photos });
+    const photos = await Photo.find({theme: "Street Life"})
+    res.render('photos/oneTheme', {photos});
 });
 router.get('/oneTheme/macro', withAuth, async (req, res, next) => {
-    const photos = await Photo.find({ theme: "Macro" });
-    res.render('photos/oneTheme', { photos });
+    const photos = await Photo.find({theme: "Macro"})
+    res.render('photos/oneTheme', {photos});
 });
 
 //ruta de One Photo por su ID:
@@ -99,6 +102,18 @@ router.get('/user', withAuth, (req, res, next) => {
 router.get('/userAccount', withAuth, (req, res, next) => {
     res.render('photos/userAccount');
 })
+
+router.post('/userAccount', withAuth, async (req, res, next) => {
+    let idUser = req.userID;
+    const {name, email, address} = req.body;
+    try{
+      let updateUser = await User.findByIdAndUpdate(idUser, {name, email, address}, {new:true});  
+      res.redirect('/userAccount');  
+    } catch(err){
+        console.log(err)
+    }
+});
+
 
 
 module.exports = router; 

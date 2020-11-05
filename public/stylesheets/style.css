@@ -1,6 +1,11 @@
 /* General */
 
+<<<<<<< HEAD
 /* html, body {
+=======
+html,
+body {
+>>>>>>> intermedia
   font-size: 100%;
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -9,12 +14,15 @@
   font-family: "Roboto", sans-serif;
 }
 
-a, a:visited, a:hover {
+a,
+a:visited,
+a:hover {
   text-decoration: none;
   color: grey;
   cursor: pointer;
 } */
 
+<<<<<<< HEAD
 /* #logo {
   width: 30%;
   height: 30%;
@@ -29,19 +37,97 @@ a, a:visited, a:hover {
 
 /*
 .addToCart {}
+=======
+/* Navigation Bar */
+
+/* .navigation_bar {
+  padding: 0.1rem;
+  margin: 0 auto;
+  background-color: black;
+}
+
+.navbar_bar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: black;
+}
+
+.navbar_item {
+  font-size: 1.5rem;
+  font-weight: 200;
+} */
+
+.logo {
+  justify-content: left;
+  display: inline-block;
+  vertical-align: top;
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+  margin-top: 15px; /* if you want it vertically middle of the navbar. */
+}
+
+/*fotos en todas las carpetas*/
+.image {
+  display: flex;
+  width: 90%;
+  height: auto;
+  margin: 5px;
+}
+
+.shopping-cart {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 5px;
+}
+.shopping-cart thead th {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 5px;
+}
+.shopping-cart tbody th {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 2px;
+}
+#shopping-cart-actions{
+  list-style: none;
+}
+
+/*button*/
+.addToCart .btn {
+  text-align: center;
+  display: inline-block;
+  color: orange;
+}
+>>>>>>> intermedia
 
 .photo-block {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+<<<<<<< HEAD
 } */
+=======
+
+}
+>>>>>>> intermedia
 
 /*nav bad bootstrap*/
 
 /* Text styles */
 
+<<<<<<< HEAD
 /* .burbank {
   font-family: 'Indie Flower', cursive;
+=======
+.burbank {
+  font-family: "Indie Flower", cursive;
+>>>>>>> intermedia
 }
 
 .text-sm {
@@ -56,6 +142,16 @@ a, a:visited, a:hover {
   color: #f1a635;
 } */
 
+<<<<<<< HEAD
+=======
+/* Black outline for title letters */
+
+.black-outline {
+  -webkit-text-fill-color: orange;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+>>>>>>> intermedia
 
 /* Navbar */
 
@@ -73,6 +169,7 @@ a, a:visited, a:hover {
   padding-right: 20px;
 }
 
+<<<<<<< HEAD
 @media(min-width: 750px) { */
   
   /* Navigation Bar */
@@ -386,3 +483,134 @@ body {
     padding: 0 1.5em;
   }
 }
+=======
+.navbar-light .navbar-nav > .active,
+.navbar-light .navbar-nav > .active:hover,
+.navbar-light .navbar-nav > .active:focus {
+  color: #b06b12;
+  background-color: transparent;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #b06b12;
+  background-color: transparent;
+}
+
+.navbar-light .navbar-nav .dropdown-item:hover {
+  color: white;
+  background-color: #b06b12;
+}
+
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show > .nav-link {
+  color: #b06b12;
+  background-color: black;
+}
+
+@media (min-width: 750px) {
+  /* Navigation Bar */
+
+  .navigation_bar {
+    padding: 0.1rem;
+    margin: 0 auto;
+    background-color: black;
+  }
+
+  .navbar_bar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: black;
+  }
+
+  .navbar_item {
+    font-size: 1.5rem;
+    font-weight: 200;
+  }
+
+  .logo {
+    justify-content: left;
+    display: inline-block;
+    vertical-align: top;
+    width: 70px;
+    height: 70px;
+    margin-right: 15px;
+    margin-top: 15px; /* if you want it vertically middle of the navbar. */
+  }
+
+  /*fotos en todas las carpetas*/
+  .image {
+    display: flex;
+    width: 40%;
+    height: auto;
+    margin: 5px;
+  }
+
+  /*button*/
+  .addToCart {
+    text-align: center;
+    display: inline-block;
+    color: orange;
+  }
+
+  .photo-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+
+@media (min-width: 1000px) {
+  /* Navigation Bar */
+
+  .navigation_bar {
+    padding: 0.1rem;
+    margin: 0 auto;
+    background-color: black;
+  }
+
+  .navbar_bar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: black;
+  }
+
+  .navbar_item {
+    font-size: 1.5rem;
+    font-weight: 200;
+  }
+
+  .logo {
+    justify-content: left;
+    display: inline-block;
+    vertical-align: top;
+    width: 70px;
+    height: 70px;
+    margin-right: 15px;
+    margin-top: 15px; /* if you want it vertically middle of the navbar. */
+  }
+  /*fotos en todas las carpetas*/
+  .image {
+    display: flex;
+    width: 40%;
+    height: auto;
+    margin: 5px;
+  }
+
+  /*button*/
+  .addToCart {
+    text-align: center;
+    display: inline-block;
+    background-color: orange;
+  }
+
+  .photo-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+>>>>>>> intermedia

@@ -1,20 +1,20 @@
 <h3>This is your cart</h3>
 
-<form id="shopping-cart" action="/cart" method="GET">
+<div id="shopping-cart">
 
     <table class="shopping-cart">
         <thead>
             <tr>
                 <th scope="col">Item {{this.title}}</th>
-                <th scope="col">Qty {{this.qty}}</th>
+                {{!-- <th scope="col">Qty {{this.qty}}</th> --}}
                 <th scope="col">Price {{this.price}}</th>
             </tr>
         </thead>
         <tbody>
             <tr>{{#each userPhotos}}
                 <th><img class="image" src={{this.image}}></th>
-                <th>qty</th>
-                <th>{{this.price}}</th>                
+                {{!-- <th>qty</th> --}}
+                <th>Price: {{this.price}}€</th>                
                 <th><form action="/delete/{{this._id}}" method="POST"><button type="submit" name="delete" class="btn" value="Delete">Delete</button></form></th>
                 <br>
             {{/each}}</tr>
@@ -26,12 +26,12 @@
         <strong>Sub Total {{totalPrice}}</strong>: <span id="stotal"></span>
     </p>
     <ul id="shopping-cart-actions">
-        <li>
+        {{!-- <li>
             <input type="submit" name="update" id="update-cart" class="btn" value="Update Cart" />
         </li>
         <li>
             <input type="submit" name="delete" id="empty-cart" class="btn" value="Empty Cart" />
-        </li>
+        </li> --}}
         <li>
             <a href="/themes" class="btn">Continue Shopping</a>
         </li>
@@ -39,4 +39,4 @@
             <a href="/payments" class="btn">Go To Payment</a>
         </li>
     </ul>
-</form>
+</div>
