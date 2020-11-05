@@ -1,10 +1,10 @@
-<div>
+<div class="onePhoto">
     <h1>{{photos.title}}</h1>
     <img class="image" src="{{photos.image}}" alt="{{photos.title}}">
     <p>Description: {{photos.description}}</p>
-    <div>
-        <h4>Price</h4>
-        <p>{{photos.price}}</p>
+    <div class="onePhotoPrice">
+        <h3>Price</h3>
+        <p>{{photos.price}}€</p>
     </div>
     <div>
         <form action="/add-to-cart/{{photos._id}}" method="POST"><button class="addToCart" type="submit">Add to

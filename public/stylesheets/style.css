@@ -83,6 +83,7 @@ a:hover {
   text-align: center;
   display: inline-block;
   color: orange;
+
 }
 
 .photo-block {
@@ -91,6 +92,10 @@ a:hover {
   justify-content: space-evenly;
 
 }
+/* one photo */
+/* .onePhoto p{
+  font-size: 20px;
+} */
 
 /*nav bad bootstrap*/
 
@@ -195,9 +200,13 @@ a:hover {
   /*fotos en todas las carpetas*/
   .image {
     display: flex;
-    width: 40%;
+    width: 70%;
     height: auto;
-    margin: 5px;
+    margin: 15px;
+  }
+  /* one photo */
+  .onePhoto p{
+    font-size: 25px;
   }
 
   /*button*/
@@ -205,6 +214,7 @@ a:hover {
     text-align: center;
     display: inline-block;
     color: orange;
+    size: 20px;
   }
 
   .photo-block {
@@ -247,16 +257,21 @@ a:hover {
   /*fotos en todas las carpetas*/
   .image {
     display: flex;
-    width: 40%;
+    width: 90%;
     height: auto;
-    margin: 5px;
+    margin: 30px;
+  }
+  /* one photo */
+  .onePhoto p{
+    font-size: 30px;
   }
 
   /*button*/
   .addToCart {
     text-align: center;
     display: inline-block;
-    background-color: orange;
+    color: orange;
+    size: 30px;
   }
 
   .photo-block {
