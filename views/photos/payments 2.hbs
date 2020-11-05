@@ -1,0 +1,27 @@
+<h1>{{title}}</h1>
+
+<nav>
+  <ul>
+    {{#if isUserLoggedIn}}
+      <li> <a href="/user">{{currentUserInfo.name}}</a> </li>
+      <li> <a href="/cart">Cart</a> </li>
+      <li> <a href="/themes">Themes</a> </li>
+      <li> <a href="/logout"> Log Out </a> </li>
+    {{else}}
+      <li> <a href="/signup"> Sign Up </a> </li>
+      <li> <a href="/login"> Log In </a> </li>
+    {{/if}}
+  </ul>
+</nav>
+
+
+<div>
+    <h1>PAYMENT</h1>
+    {{!-- pasarela de pago --}}
+    {{!-- aqui iria una info del usuario (nombre, apellidos) --}}
+    <p>{{req.currentUserInfo}}</p>
+    {{!-- luego va una direccion de envio --}}
+    {{!-- info del metodo de pago(tarjeta o CC) --}}
+    {{!-- boton de confirmar pago --}}
+    <button class="btn" name="payment" >Accept Payment</button>
+</div>
