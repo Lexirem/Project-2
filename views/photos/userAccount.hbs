@@ -1,14 +1,33 @@
+<div class="vid-container">
+  <img id="Video1" class="bgvid back"
+    src=""
+    type="video/mp4">
 
+  <div class="inner-container">
+    <img id="Video2" class="bgvid inner"
+      src="">
   
-      <h3 class="btn">Personal details</h3>
+      
 
 <form action="/userAccount" method="POST">
-    <div>
-        <label for="name-input"> Name </label>
-        <input type="text" name="name" id="name-input" value="{{currentUserInfo.name}}">
-    </div>
 
-    <div>
+    <div class="box">
+        <h1>Personal details</h1>
+
+        <input type="text" name="name" placeholder="Name" value="{{currentUserInfo.name}}" />
+
+        <input type="email" name="email" placeholder="Email" value="{{currentUserInfo.email}}"/>
+
+        <input type="text" name="address" placeholder="Address" value="{{currentUserInfo.address}}"/>
+
+        <button type="submit" class="btn"> save changes </button>
+
+    </div>
+</form>
+
+    {{!-- <label for="name-input"> Name </label>
+        <input type="text" name="name" id="name-input" value="{{currentUserInfo.name}}"> --}}
+    {{!-- <div>
         <label for="email-input"> Email </label>
         <input type="email" name="email" id="email-input" value="{{currentUserInfo.email}}">
     </div>
@@ -16,12 +35,9 @@
     <div>
         <label for="address-input"> Address </label>
         <input type="address" name="address" id="address-input" value="{{currentUserInfo.address}}">
-    </div>
+    </div> --}}
 
-
-
-    <button type="submit" class="btn"> save changes </button>
-</form>
+    
 
 
 
