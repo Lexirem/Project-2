@@ -108,7 +108,7 @@ router.post('/userAccount', withAuth, async (req, res, next) => {
     const {name, email, address} = req.body;
     try{
       let updateUser = await User.findByIdAndUpdate(idUser, {name, email, address}, {new:true});  
-      res.redirect('/userAccount');  
+      res.redirect('/user');  
     } catch(err){
         console.log(err)
     }
