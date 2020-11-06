@@ -15,11 +15,10 @@
             <tr>{{#each userPhotos}}
                 <div class="gallery_oneTheme">
                     <span class="flex-nombre">
-                        <th> {{this.title}}</th>
-                        <th><img class="image_cart" src={{this.image}}></th>
+                        <p> {{this.title}}</p>
+                        <img class="image_cart" src={{this.image}}>
                     </span>
-                    <th>Price: {{this.price}}€</th>
-                    <th>
+                    <h3>Price: {{this.price}}€</h3>
                         <form action="/delete/{{this._id}}" method="POST">
                             <button type="submit" name="delete" class="btn" value="Delete">Delete</button></form>
                     </th>
