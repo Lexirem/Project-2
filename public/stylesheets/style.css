@@ -6,7 +6,6 @@ a, a:visited, a:hover {
   cursor: pointer;
 }
 
-
 /* Shopping cart */
 
 #shopping-cart {
@@ -39,14 +38,15 @@ a, a:visited, a:hover {
 }
 
 /*button*/
+
 .addToCart {
   text-align: center;
   display: inline-block;
   color: orange;
   margin-top: 5px;
-
 }
-.btn{
+
+.btn {
   color: orange;
 }
 
@@ -777,25 +777,51 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center;
- }
+}
 
- .gallery_oneTheme_flex {
+.gallery_oneTheme_flex {
   display: flex;
   flex-direction: row;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
   justify-content: space-evenly;
- }
+}
 
- .image {
-   width: 80vh;
- }
+.image {
+  width: 80vh;
+}
 
- .flex-nombre h1 {
-font-size: 30px;
-font-weight: 300;
-margin-bottom: 8px;
+.flex-nombre h1 {
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 8px;
 }
 
 .image_cart {
   width: 30vh;
+}
+
+.instagram {
+  text-align: center;
+}
+
+.instagram h2 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 8px;
+}
+
+.home__headline h1 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 8px;
+}
+
+.userClass {
+margin-left: 20px;
+}
+
+.userClassText{
+  font-size: 20px;
 }
