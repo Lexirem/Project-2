@@ -7,7 +7,7 @@
                     <br>
                     <span>{{photos.description}}</span>
                 </div>
-                <img class="image" src="{{photos.image}}" alt="{{photos.title}}">
+                <img class="" src="{{photos.image}}" alt="{{photos.title}}">
             </div>
             <div class="headline__copy">
                 <h2>Price</h2>
@@ -16,7 +16,11 @@
             <div>
                 <form action="/add-to-cart/{{photos._id}}" method="POST">
                     <button class="addToCart" type="submit">Add to cart</button>
+                    
                 </form>
+                <div>
+                    <a href="/themes">BACK</a>
+                </div>
             </div>
         </div>
     </header>
