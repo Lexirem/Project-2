@@ -39,10 +39,12 @@ a, a:visited, a:hover {
 }
 
 /*button*/
-
-.addToCart .btn {
+.addToCart {
   text-align: center;
   display: inline-block;
+  color: orange;
+}
+.btn{
   color: orange;
 }
 
