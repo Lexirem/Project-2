@@ -5,41 +5,32 @@
 </div>
 
 <div id="shopping-cart">
-    <table class="shopping-cart_table">
-        <thead>
-            <tr>
-                <th scope="col">Items:</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>{{#each userPhotos}}
-                <div class="gallery_cart">
-                    <span class="flex-nombre">
-                        <th> {{this.title}}</th>
-                        <th><img class="image_cart" src={{this.image}}></th>
-                    </span>
-                    <th>Price: {{this.price}}€</th>
-                    <th>
-                        <form action="/delete/{{this._id}}" method="POST">
-                            <button type="submit" name="delete" class="btn" value="Delete">Delete</button></form>
-                    </th>
-                    <br>
-                </div>
-                {{/each}}
-            </tr>
-        </tbody>
-    </table>
-
-
-    <p id="sub-total">
-        <strong>Sub Total: {{totalSum}}</strong>€<span id="stotal"></span>
-    </p>
-    <ul id="shopping-cart-actions">
-        <li>
-            <a href="/themes" class="btn">Continue Shopping</a>
-        </li>
-        <li>
-            <a href="/payments" class="btn">Go To Payment</a>
-        </li>
-    </ul>
+    <div class="shopping-cart_table">
+        <h3>Items:</h3>
+        <br>
+        <div>{{#each userPhotos}}
+            <div class="gallery_oneTheme">
+                <span class="flex-nombre">
+                    <p> {{this.title}}</p>
+                    <img class="image_cart" src={{this.image}}>
+                </span>
+                <h3>Price: {{this.price}}€</h3>
+                <form action="/delete/{{this._id}}" method="POST">
+                    <button type="submit" name="delete" class="btn" value="Delete">Delete</button></form>
+                <br>
+            </div>
+            {{/each}}
+        </div>
+        <p id="sub-total">
+            <strong>Sub Total: {{totalSum}}</strong>€<span id="stotal"></span>
+        </p>
+        <ul id="shopping-cart-actions">
+            <li>
+                <a href="/themes" class="btn">Continue Shopping</a>
+            </li>
+            <li>
+                <a href="/payments" class="btn">Go To Payment</a>
+            </li>
+        </ul>
+    </div>
 </div>
