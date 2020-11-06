@@ -796,21 +796,35 @@ body {
   margin-bottom: 8px;
 }
 
+/* Shopping cart */
 .image_cart {
   width: 30vh;
+}
+
+#shopping-cart {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 10px;
+}
+.gallery_cart{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 2px;
+
 }
 
 .instagram {
   text-align: center;
 }
-
 .instagram h2 {
   text-align: center;
   font-size: 30px;
   font-weight: 300;
   margin-bottom: 8px;
 }
-
 .home__headline h1 {
   text-align: center;
   font-size: 30px;
