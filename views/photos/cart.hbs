@@ -14,19 +14,23 @@
             <tr>{{#each userPhotos}}
                 <th><img class="image" src={{this.image}}></th>
                 {{!-- <th>qty</th> --}}
-                <th>Price: {{this.price}}€</th>                
-                <th><form action="/delete/{{this._id}}" method="POST"><button type="submit" name="delete" class="btn" value="Delete">Delete</button></form></th>
+                <th>Price: {{this.price}}€</th>
+                <th>
+                    <form action="/delete/{{this._id}}" method="POST"><button type="submit" name="delete" class="btn"
+                            value="Delete">Delete</button></form>
+                </th>
                 <br>
-            {{/each}}</tr>
+                {{/each}}
+            </tr>
         </tbody>
     </table>
 
-    
+
     <p id="sub-total">
         <strong>Sub Total {{totalPrice}}</strong>: <span id="stotal"></span>
     </p>
     <ul id="shopping-cart-actions">
-        
+
         <li>
             <a href="/themes" class="btn">Continue Shopping</a>
         </li>
