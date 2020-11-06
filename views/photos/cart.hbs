@@ -5,7 +5,7 @@
     <table class="shopping-cart">
         <thead>
             <tr>
-                <th scope="col">Item {{this.title}}</th>
+                <th scope="col">Items: {{this.title}}</th>
                 {{!-- <th scope="col">Qty {{this.qty}}</th> --}}
                 {{!-- <th scope="col">Price {{this.price}}</th> --}}
             </tr>
@@ -26,12 +26,7 @@
         <strong>Sub Total {{totalPrice}}</strong>: <span id="stotal"></span>
     </p>
     <ul id="shopping-cart-actions">
-        {{!-- <li>
-            <input type="submit" name="update" id="update-cart" class="btn" value="Update Cart" />
-        </li>
-        <li>
-            <input type="submit" name="delete" id="empty-cart" class="btn" value="Empty Cart" />
-        </li> --}}
+        
         <li>
             <a href="/themes" class="btn">Continue Shopping</a>
         </li>
