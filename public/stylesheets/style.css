@@ -816,4 +816,19 @@ margin-bottom: 8px;
 
 }
 
+.instagram {
+  text-align: center;
+}
+.instagram h2 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 8px;
+}
+.home__headline h1 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 8px;
+}
 
