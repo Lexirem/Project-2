@@ -1,12 +1,21 @@
-<h2> Log In </h2>
+<div class="vid-container">
+  <img id="Video1" class="bgvid back"
+    src="https://res.cloudinary.com/mscsam/image/upload/v1604175053/Landscape/lands_galway1_vbqq2m.jpg"
+    type="video/mp4">
 
-{{#if errorMessage}}
-  <p class="error-message">
-    {{ errorMessage }}
-  </p>
-{{/if}}
+  <div class="inner-container">
+    <img id="Video2" class="bgvid inner"
+      src="https://res.cloudinary.com/mscsam/image/upload/v1604175053/Landscape/lands_galway1_vbqq2m.jpg">
 
-<form action="/login" method="post">
+      {{!-- *make this images responsive.--}}
+
+    {{#if errorMessage}}
+    <p class="error-message">
+      {{ errorMessage }}
+    </p>
+    {{/if}}
+
+    {{!-- <form action="/login" method="post">
   <div>
     <label for="email-input"></label>
     <input type="email" name="email" id="email-input"
@@ -19,14 +28,25 @@
       placeholder="Password">
   </div>
 
-  <button class="btn"> Log In </button>
+  <button class="btn"> Login </button>
 </form>
 
 <p>
   Don't have an account?
   <a href="/signup">
-    Create an account.
+    Sign Up.
   </a>
-</p>
+</p> --}}
 
 
+    <form action="/login" method="post">
+      <div class="box">
+        <h1>Login</h1>
+        <input type="email" name="email" placeholder="Email" />
+        <input type="password" name="password" placeholder="Password" />
+        <button>Login</button>
+    </form>
+    <p>Don't have an account?<span> <a href="/signup">Sign Up</a></span></p>
+  </div>
+</div>
+</div>

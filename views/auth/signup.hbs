@@ -1,33 +1,45 @@
-<h2> Sign Up </h2>
+<div class="vid-container">
+    <img id="Video1" class="bgvid back"
+        src="https://res.cloudinary.com/mscsam/image/upload/v1604175056/Landscape/lands_niort1_inbwvd.jpg"
+        type="video/mp4">
 
-{{#if errorMessage}}
-<p class="error-message">
-    {{ errorMessage }}
-</p>
-{{/if}}
+    <div class="inner-container">
+        <img id="Video2" class="bgvid inner"
+            src="https://res.cloudinary.com/mscsam/image/upload/v1604175056/Landscape/lands_niort1_inbwvd.jpg">
 
-<form action="/signup" method="post">
-    <div>
-        <label for="name-input"> Name </label>
-        <input type="text" name="name" id="name-input" placeholder="Your name">
+{{!-- *make this images responsive.--}}
+        {{#if errorMessage}}
+        <p class="error-message">
+            {{ errorMessage }}
+        </p>
+        {{/if}}
+
+
+        <form action="/signup" method="post">
+            <div class="box">
+                <h1>Signup</h1>
+                <input type="text" name="name" id="name-input" placeholder="Your Name">
+                <input type="email" name="email" id="email-input" placeholder="input your e-mail">
+                <input type="password" name="password" id="password-input" placeholder="••••••••••••">
+                <button>Create New Account </button>
+        </form>
+        <p>Already have an account?<span> <a id="linkSingn" href="/login">Log in.</a></span></p>
     </div>
+</div>
 
-    <div>
-        <label for="email-input"> Email </label>
-        <input type="email" name="email" id="email-input" placeholder="e.g., diana@themyscira.agency">
-    </div>
-
-    <div>
-        <label for="password-input"> Password </label>
-        <input type="password" name="password" id="password-input" placeholder="e.g., ••••••••••••">
-    </div>
-
-    <button class="btn"> Create New Account </button>
-</form>
-
-<p>
-    Already have an account?
-    <a href="/login">
-        Log in.
-    </a>
-</p>
+{{!-- <form action="/signup" method="post">
+            <div>
+                <label for="name-input"> Name </label>
+                <input type="text" name="name" id="name-input" placeholder="Your Name">
+            </div>
+            <div>
+                <label for="email-input"> Email </label>
+                <input type="email" name="email" id="email-input" placeholder="input your em-mail">
+            </div>
+            <div>
+                <label for="password-input"> Password </label>
+                <input type="password" name="password" id="password-input" placeholder="••••••••••••">
+            </div>
+            <button class="btn"> Create New Account </button>
+        </form>
+        <p>Already have an account?<a href="/login">Log in.</a></p> --}}
