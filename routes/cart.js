@@ -10,8 +10,11 @@ router.get("/cart", withAuth, async (req, res, next) => {
   let idUser = req.userID;
   let user = await User.findById(idUser).populate("cart");
   let userPhotos = user.cart;
-  // console.log(userPhotos)
-  res.render("photos/cart", { userPhotos });
+  let totalSum = userPhotos.reduce((acc, currentValue) => {
+       return currentValue.price + acc;
+  },0)
+   /* console.log(totalSum); */
+  res.render("photos/cart", { userPhotos, totalSum });
 });
 
 //ruta para añadir foto al carrito
@@ -39,22 +42,22 @@ router.post("/delete/:id", withAuth, async (req, res, next) => {
   try {
     let foundUser = await User.findById(idUser);
     console.log(foundUser.cart.length)
-    if(foundUser.cart.length > 1){
-    let user = await User.findByIdAndUpdate(
-      idUser,
-      { $pull: { cart: idPhoto } },
-      { new: true }
-    );
-    console.log(user);
-    res.redirect("/cart");
+    if (foundUser.cart.length > 1) {
+      let user = await User.findByIdAndUpdate(
+        idUser,
+        { $pull: { cart: idPhoto } },
+        { new: true }
+      );
+      console.log(user);
+      res.redirect("/cart");
     } else {
-    let user = await User.findByIdAndUpdate(
-      idUser,
-      { cart: []},
-      { new: true }
-    );
-    console.log(user);
-    res.redirect('/cart')
+      let user = await User.findByIdAndUpdate(
+        idUser,
+        { cart: [] },
+        { new: true }
+      );
+      console.log(user);
+      res.redirect('/cart')
     };
   } catch (err) {
     console.log(err);

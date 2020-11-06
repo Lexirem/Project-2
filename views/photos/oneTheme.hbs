@@ -4,22 +4,26 @@
     </section>
 </div>
 
-{{#each photos}}
-<h2>{{this.title}}</h2>
-<section class="gallery">
-    <div class="gallery__container">
-        <figure class="gallery__item">
-            <div class=" gatsby-image-wrapper" style="position: relative; overflow: hidden;">
-                <a class="image" href="/onePhoto/{{_id}}">
-                    <img class="image" src="{{this.image}}" alt="{{this.title}}">
-                </a>
-            </div>
-        </figure>
+
+<section class="gallery_oneTheme_flex">
+    
+    {{#each photos}}
+    <div class="gallery_oneTheme">
+        <span class="flex-nombre">
+    <h1>{{this.title}}</h1>
+
+            <a href="/onePhoto/{{_id}}">
+                <img class="image" src="{{this.image}}" alt="{{this.title}}">
+            </a>
+            </span>
+    <div class="description">
         <p>Description: {{this.description}}</p>
-        <h4>Price: {{this.price}}</h4>
+        <h4 id="priceButton">Price: {{this.price}}€</h4>
         <form action="/add-to-cart/{{this._id}}" method="POST"><button class="addToCart" type="submit">Add to
                 cart</button>
         </form>
     </div>
+
+    </div>
+    {{/each}}
 </section>
-{{/each}}

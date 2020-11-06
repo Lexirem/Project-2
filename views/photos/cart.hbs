@@ -1,25 +1,30 @@
-<h3>This is your cart</h3>
+<div class="grid">
+    <section class="copy">
+        <h1>This is your cart</h1>
+    </section>
+</div>
 
 <div id="shopping-cart">
-
-    <table class="shopping-cart">
+    <table class="shopping-cart_table">
         <thead>
             <tr>
-                <th scope="col">Items: {{this.title}}</th>
-                {{!-- <th scope="col">Qty {{this.qty}}</th> --}}
-                {{!-- <th scope="col">Price {{this.price}}</th> --}}
+                <th scope="col">Items:</th>
             </tr>
         </thead>
         <tbody>
             <tr>{{#each userPhotos}}
-                <th><img class="image" src={{this.image}}></th>
-                {{!-- <th>qty</th> --}}
-                <th>Price: {{this.price}}€</th>
-                <th>
-                    <form action="/delete/{{this._id}}" method="POST"><button type="submit" name="delete" class="btn"
-                            value="Delete">Delete</button></form>
-                </th>
-                <br>
+                <div class="gallery_oneTheme">
+                    <span class="flex-nombre">
+                        <th> {{this.title}}</th>
+                        <th><img class="image_cart" src={{this.image}}></th>
+                    </span>
+                    <th>Price: {{this.price}}€</th>
+                    <th>
+                        <form action="/delete/{{this._id}}" method="POST">
+                            <button type="submit" name="delete" class="btn" value="Delete">Delete</button></form>
+                    </th>
+                    <br>
+                </div>
                 {{/each}}
             </tr>
         </tbody>
@@ -27,10 +32,9 @@
 
 
     <p id="sub-total">
-        <strong>Sub Total {{totalPrice}}</strong>: <span id="stotal"></span>
+        <strong>Sub Total: {{totalSum}}</strong>€<span id="stotal"></span>
     </p>
     <ul id="shopping-cart-actions">
-
         <li>
             <a href="/themes" class="btn">Continue Shopping</a>
         </li>
